@@ -1,0 +1,312 @@
+% 第24段階の追加記録. 第23段階の本文に続けて追加する.
+% 既存の \bm, \bbo, proposition, proof, booktabs, hyperrefを使用する.
+% 新しい引用キー, 文献環境, 文書開始・終了命令は追加しない.
+% 根拠資料: bivariate_survival_reconstruction_stage24.zip.
+% 第25段階の大域最適値の検証とは分けて記録する.
+
+\section{第24段階の目的と再解析する親クラス}
+\label{sec:stage24_scope}
+
+第23段階で共通尾部クラスを外れた13件を全て再解析する.
+粗い記録・深度3の5件と深度4の8件であり,
+同じ母標本の再観測を含むため, 母標本の種類は8個である.
+新しい親標本を生成せず, 観測区間, 限界, 学習・検証個数,
+全実数空間の観測同値類と共通初期測度$R$を保持する.
+全データ個数を点推定に用いるが,
+学習側だけの2EM予測, 検証尤度閾値と親信頼集合は変更しない.
+
+原EMの13結果は非負・規格化された正当な生存分布である.
+今回の問題は, 別途宣言した尾部クラスへの不所属であり,
+分布自体の不正ではない. 旧結果を上書きしない.
+各入力の観測同値類は16個であり, 親クラスを
+\begin{align}
+\mathcal K
+&=\{\bm m\ge0:\bm1^{\mathsf T}\bm m=1,
+\ \bm D_j\bm m\le1/2\quad(j=1,2,3)\}
+\label{eq:stage24_parent_class}
+\end{align}
+とする. $\bm D_j$はD領域への所属指示行である.
+対象設計では$D_3\subset D_1\cap D_2$なので, 第三制約は冗長である.
+この尾部上界は外部のモデル条件であり, 観測から推定した量ではない.
+
+\section{同じ補完E-stepと制約付きM-step}
+\label{sec:stage24_estep}
+
+正の個数$n_i$を持つ記録について,
+$a_i(\bm m)=\bm A_i\bm m$, $q_i(\bm m)=\bm V_i\bm m$とする.
+従来のD補完で得られる期待潜在個数と正規化は,
+\begin{align}
+\nu_h(\bm m)
+&=m_h\sum_i n_i\left[
+\frac{A_{ih}}{a_i(\bm m)}+
+\frac{1-V_{ih}}{q_i(\bm m)}\right],
+\label{eq:stage24_expected_counts}\\
+K(\bm m)&=\sum_i\frac{n_i}{q_i(\bm m)}
+=\sum_h\nu_h(\bm m),\qquad
+w_h=\frac{\nu_h(\bm m)}{K(\bm m)}.
+\label{eq:stage24_normalization}
+\end{align}
+ここまでは元のEMと同じである.
+制約付きM-stepでは, 正規化したsurrogate
+\begin{align}
+\overline{\mathcal Q}(\bm u\mid\bm m)
+&=\sum_h w_h\log u_h
+\label{eq:stage24_surrogate}
+\end{align}
+を$\mathcal K$上で最大化する.
+$w_h=0$の項は加えない. 元の条件付き尤度が非凹でも,
+このsurrogateは$\bm u$について凹である.
+観測機構と補完E-stepは変更していないため,
+可行な観測許容質量$\bm m,\bm u$について,
+\begin{align}
+\ell(\bm u)-\ell(\bm m)
+&\ge K(\bm m)\{
+\overline{\mathcal Q}(\bm u\mid\bm m)
+-\overline{\mathcal Q}(\bm m\mid\bm m)\}
+\label{eq:stage24_em_lower_bound}
+\end{align}
+という同じEM下界を使える.
+
+\section{二つのD所属による四群への正確な還元}
+\label{sec:stage24_four_groups}
+
+$\mathcal H_{ab}=\{h:(D_{1h},D_{2h})=(a,b)\}$を用い,
+\begin{align}
+W_{ab}&=\sum_{h\in\mathcal H_{ab}}w_h,\qquad
+p_{ab}=\sum_{h\in\mathcal H_{ab}}u_h
+\label{eq:stage24_group_masses}
+\end{align}
+とする. 本段階では四つの$W_{ab}$が全て正の場合を扱う.
+群総質量$p_{ab}$を固定したとき, 群内部の最適配分は
+\begin{align}
+u_h^*&=p_{ab}\frac{w_h}{W_{ab}}
+\quad(h\in\mathcal H_{ab})
+\label{eq:stage24_within_group}
+\end{align}
+である. 実際, 群内の条件付き質量を$r_h=u_h/p_{ab}$と書けば,
+その項は$W_{ab}\log p_{ab}+\sum_{h\in\mathcal H_{ab}}w_h\log r_h$であり,
+後者は$r_h=w_h/W_{ab}$で最大となる.
+従って16質量のM-stepは,
+\begin{align}
+\max_{\bm p}\quad&\sum_{a,b}W_{ab}\log p_{ab},
+\label{eq:stage24_group_objective}\\
+p_{ab}&\ge0,\qquad \sum_{a,b}p_{ab}=1,\notag\\
+p_{10}+p_{11}&\le\frac12,\qquad
+p_{01}+p_{11}\le\frac12
+\label{eq:stage24_group_constraints}
+\end{align}
+へ正確に還元される.
+D所属の二成分の独立性を仮定したのではない.
+元のA, B, C記録と補完期待量は$W_{ab}$に保持される.
+
+\subsection{四つの活性集合に対応する候補}
+\label{subsec:stage24_active_sets}
+
+制約が非活性なら$p_{ab}=W_{ab}$である.
+第一制約だけが活性の場合は$t=W_{10}+W_{11}$として,
+\begin{align}
+p_{1b}&=\frac{W_{1b}}{2t},\qquad
+p_{0b}=\frac{W_{0b}}{2(1-t)}
+\label{eq:stage24_first_active}
+\end{align}
+を得る. 第二制約だけの場合は両座標を交換する.
+両制約が活性の場合は,
+\begin{align}
+p_{00}=p_{11}&=\frac{W_{00}+W_{11}}2,\qquad
+p_{01}=p_{10}=\frac{W_{01}+W_{10}}2
+\label{eq:stage24_both_active}
+\end{align}
+である.
+
+各候補について可行性に加え, 非負な乗数$\beta_1,\beta_2$と$\eta$による
+\begin{align}
+\frac{W_{ab}}{p_{ab}}
+&=\eta+\beta_1a+\beta_2b,
+\label{eq:stage24_group_stationarity}\\
+\beta_1(p_{10}+p_{11}-1/2)&=0,\qquad
+\beta_2(p_{01}+p_{11}-1/2)=0
+\label{eq:stage24_group_complementarity}
+\end{align}
+を有理数で検査する.
+
+\begin{proposition}[四群M-stepの大域最大化]
+\label{prop:stage24_mstep_optimality}
+上の可行性, 非負乗数と相補性を満たす候補は,
+四群問題および元の制約付きsurrogateの大域最大化解である.
+\end{proposition}
+\begin{proof}
+凹関数の接線上界から, 任意の可行な$\bm p'$について,
+\begin{align}
+\sum_{a,b}W_{ab}\log\frac{p'_{ab}}{p_{ab}}
+&\le\sum_{a,b}\frac{W_{ab}}{p_{ab}}(p'_{ab}-p_{ab})\notag\\
+&=\beta_1\{p'_{10}+p'_{11}-p_{10}-p_{11}\}\notag\\
+&\quad+\beta_2\{p'_{01}+p'_{11}-p_{01}-p_{11}\}\notag\\
+&\le0.
+\label{eq:stage24_mstep_proof}
+\end{align}
+正規化で$\eta$の項は消え, 最後の不等式は相補性と可行性による.
+群内部の最適配分を戻せば元のsurrogateについても成立する.
+\end{proof}
+
+零の群期待質量を含む退化ケースや, 異なる尾部上界に対する一般解を,
+今回の閉形式実装で扱ったとはしない.
+対象13件の全1040更新では, 四群の正値性を確認した.
+
+\section{有限精度GEMの採用条件と更新誤差}
+\label{sec:stage24_finite_precision}
+
+有理数反復の分母増大を抑えるため,
+各回の厳密なM-step解を22有効十進桁の有理数候補へ変換する.
+規格化後, 丸めによる尾部違反がある場合に限り,
+固定した可行初期質量との有理数混合で新候補を作る.
+これは採用前の候補構成であり,
+旧クラス外推定値を事後的に修復して報告する操作ではない.
+親モデルに正の質量floorを追加しない.
+
+候補$\bm u$の採用には, 元の全制約と,
+\begin{align}
+\overline{\mathcal Q}(\bm u\mid\bm m)
+-\overline{\mathcal Q}(\bm m\mid\bm m)&\ge0,\notag\\
+\frac{\ell(\bm u)-\ell(\bm m)}{N}
+&\ge\frac{K(\bm m)}N
+\{\overline{\mathcal Q}(\bm u\mid\bm m)
+-\overline{\mathcal Q}(\bm m\mid\bm m)\}\ge0
+\label{eq:stage24_acceptance}
+\end{align}
+を有理数対数区間で検査する.
+ここで$N=\sum_i n_i$は実際の観測総数であり, 補完数$K$とは異なる.
+実装した反復は, 近似候補の増加を証明したGeneralized EMである.
+厳密なM-step解$\bm u^*$との目的値差にも,
+\begin{align}
+0&\le\overline{\mathcal Q}(\bm u^*\mid\bm m)
+-\overline{\mathcal Q}(\bm u\mid\bm m)\notag\\
+&\le\sum_{h:w_h>0}w_h\left(\frac{u_h^*}{u_h}-1\right)
+\label{eq:stage24_mstep_error}
+\end{align}
+という接線上界を用いる.
+
+13件それぞれで固定80回, 合計1040更新を検査した.
+全更新で可行性, surrogate増加と観測尤度増加を確認し,
+一更新の平均対数尤度増加の最小下界は約$1.023829\times10^{-7}$,
+正規化M-step損失の最大上界は約$2.452849\times10^{-24}$だった.
+後者はM-step内部の計算誤差であり, 統計的な推定精度ではない.
+80更新時点の制約付き一階残差上界は
+約$5.68\times10^{-5}$から$5.33\times10^{-4}$であり,
+この固定回数の結果を収束済みとはしない.
+
+\section{別経路の境界候補と制約付き停止診断}
+\label{sec:stage24_stationarity}
+
+GEM監査とは別に, 同じ観測尤度を三つの決定論的初期値からSLSQPで最大化し,
+活性面上のNewton補正を候補提案に使った.
+初期値は80更新後, 共通$R$, 16クラス一様である.
+提案を非負有理数へ変換し, 元の尾部制約,
+正個数記録の正値性と80更新後からの観測尤度増加を検査した.
+この部分をGEMの一更新とは呼ばない.
+
+平均対数尤度の勾配を$\bm g(\bm m)=\nabla\ell(\bm m)/N$とする.
+尤度の零次同次性により$\bm g^{\mathsf T}\bm m=0$であり,
+制約付きの最大一次変化を
+\begin{align}
+\delta(\bm m)
+&=\max_{\bm v\in\mathcal K}
+\bm g(\bm m)^{\mathsf T}(\bm v-\bm m)
+\label{eq:stage24_directional_gap}
+\end{align}
+と定義する.
+非負な$\lambda_1,\lambda_2$と$z$が全質量列で
+\begin{align}
+\lambda_1D_{1h}+\lambda_2D_{2h}+z&\ge g_h
+\label{eq:stage24_directional_dual}
+\end{align}
+を満たせば,
+\begin{align}
+0\le\delta(\bm m)&\le z+\frac{\lambda_1+\lambda_2}{2}
+\label{eq:stage24_directional_upper}
+\end{align}
+となる. 数値LPが提案した乗数を非負有理数にした後,
+$z=\max_h(g_h-\lambda_1D_{1h}-\lambda_2D_{2h})$と置き直し,
+全列で双対可行性を検査する.
+
+\begin{table}[htbp]
+\centering
+\caption{第24段階で別経路から得た制約付き候補の停止診断.
+一階残差は平均対数尤度に対応する.}
+\label{tab:stage24_candidates}
+\begin{tabular}{crcc}
+\toprule
+深度 & 件数 & 旧候補の最小収録確率 & 新候補の最大一階残差上界 \\
+\midrule
+3 & 5 & 約$0.45464$--$0.48946$ & $9.45\times10^{-15}$ \\
+4 & 8 & 約$0.42635$--$0.49094$ & $5.85\times10^{-14}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+新しい13候補は全て$q_j\ge1/2$を満たす一方,
+同じ候補の未制約平均正スコアには最大約0.032846が残った.
+クラス外へ出る方向も数える未制約スコアを,
+制約付き問題の停止判定へ流用してはいけない.
+また, 元の尤度は一般に非凹なので,
+$\delta$を大域最適値との差と読み替えない.
+本段階で証明した大域最大化は各surrogateについてであり,
+元の尤度に対する13個の大域MLEを認定したものではない.
+
+\section{不可視質量の役割と比較の範囲}
+\label{sec:stage24_invisible_mass}
+
+旧候補から完全不可視質量$\theta$を除いて規格化すれば,
+条件付き記録比率は変わらず, 収録確率は$q_j/(1-\theta)$となる.
+しかし13件のうち, この操作だけで尾部クラスへ入るのは1件だった.
+残る12件では不可視質量を全て除いても最小収録確率が$1/2$未満となる.
+違反を一律に初期不可視質量だけの問題とは解釈できない.
+
+制約付きM-stepでは完全不可視セルにも,
+\begin{align}
+u_h^*&=\frac{m_h}{\eta+\beta_1+\beta_2}
+\label{eq:stage24_invisible_update}
+\end{align}
+が適用され得る.
+非活性の場合は元の保存則へ戻るが, 活性制約があれば一般には保存されない.
+これは追加親クラス内で最大化する結果であり, 新しいD情報の観測ではない.
+候補の不可視質量がゼロ付近になっても, 一意な識別を結論しない.
+
+参考生存RMSEは13件全てで旧候補より小さくなったが,
+クラス違反例だけを選んだ再解析である.
+一般的な平均リスク改善や被覆率改善とは解釈しない.
+旧未制約候補より尤度が下がる場合も, 実行可能集合が異なるので矛盾しない.
+尤度の単調性を比較するのは, 同じ制約クラス内の可行更新間である.
+
+\section{独立検証と保存範囲}
+\label{sec:stage24_record}
+
+独立検証器は公開入力から13モデルを再構成し,
+元の学習2EM予測との一致, 1040更新,
+16640個のM-step KKT座標等式と13境界候補を確認した.
+M-step提案関数を呼ばず, 保存乗数から別経路で解を再構成する.
+LP, 非線型最適化と乱数生成を呼ばずに検査し,
+五種類の有害な改ざんを拒否した.
+四群の256有理数対照では, 非活性90, 第一のみ57,
+第二のみ57, 両方活性52件を確認した.
+別のSLSQPとの16比較における目的差は最大$6.67\times10^{-16}$未満だった.
+
+保存時には全13ケースを別出力先で再実行し,
+13証拠JSONと比較CSVの全バイト一致,
+集約JSONの実行時間以外の一致を確認している.
+本LaTeX記録の作成時にも保存された13証拠を独立検証器で再検査した.
+今回の再確認ではGEM反復と境界候補の最適化を再実行していない.
+
+保存パッケージは
+\nolinkurl{bivariate_survival_reconstruction_stage24.zip}である.
+\texttt{core.py}に提案計算と正確なM-step,
+\texttt{audit\_stage24.py}に監査,
+\texttt{verify\_stage24.py}に独立検証を保存した.
+\begin{verbatim}
+python verify_stage24.py --outdir outputs
+\end{verbatim}
+比較表は\nolinkurl{outputs/comparison.csv},
+証拠は\nolinkurl{outputs/certificates/}にある.
+新しい母標本生成, 720件全体の再適合,
+親信頼集合の変更と被覆率の再評価は行っていない.
+次段階では, 一階条件を満たした同じ13候補について,
+元の条件付き尤度の大域最適値との差を上下界によって検査する.

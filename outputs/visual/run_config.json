@@ -1,0 +1,74 @@
+{
+  "alpha_split_membership": 0.05,
+  "benchmark": "two_band_gaussian_visual_20260914",
+  "em": {
+    "max_iterations": 20000,
+    "score_tolerance": 1e-07
+  },
+  "field_probabilities": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "limits_standardized_X": {
+    "deep": [
+      [
+        0.5,
+        -0.5
+      ],
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        -1.5,
+        -1.5
+      ]
+    ],
+    "shallow": [
+      [
+        0.5,
+        -0.5
+      ],
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        -0.5,
+        -0.5
+      ]
+    ]
+  },
+  "mean_log10L": [
+    10.5,
+    10.2
+  ],
+  "notes": "New observation design, not an exact rerun of the legacy Gaussian experiment. True mean/scale set physical plotting units; estimator receives only fixed grid, thresholds, public counts and a fixed reference mass. No parent total or latent values enter fitting.",
+  "parent_sizes": [
+    1000,
+    4000,
+    16000
+  ],
+  "reference": "independent standard logistic in centered scaled log luminosities; no fitted truth parameters",
+  "replicates": 20,
+  "representative": {
+    "parent_size": 16000,
+    "replicate": 0
+  },
+  "rho": [
+    0.55,
+    0.9
+  ],
+  "seed": 20260914,
+  "sigma_dex": [
+    0.55,
+    0.65
+  ],
+  "standardized_edges": {
+    "lower": -4.0,
+    "step": 0.25,
+    "upper": 4.0
+  },
+  "tail_upper_bound_diagnostic": 0.5
+}

@@ -1,0 +1,300 @@
+{
+  "analytic_tail_controls": [
+    {
+      "depth": 2,
+      "lambda": "-3/4",
+      "maximum_compatible_invisible_mass": "67/169",
+      "true_invisible": "13/64"
+    },
+    {
+      "depth": 3,
+      "lambda": "-3/4",
+      "maximum_compatible_invisible_mass": "365/1352",
+      "true_invisible": "37/1024"
+    },
+    {
+      "depth": 4,
+      "lambda": "-3/4",
+      "maximum_compatible_invisible_mass": "41/169",
+      "true_invisible": "0"
+    },
+    {
+      "depth": 2,
+      "lambda": "0",
+      "maximum_compatible_invisible_mass": "2/5",
+      "true_invisible": "1/4"
+    },
+    {
+      "depth": 3,
+      "lambda": "0",
+      "maximum_compatible_invisible_mass": "1/4",
+      "true_invisible": "1/16"
+    },
+    {
+      "depth": 4,
+      "lambda": "0",
+      "maximum_compatible_invisible_mass": "1/5",
+      "true_invisible": "0"
+    },
+    {
+      "depth": 2,
+      "lambda": "3/4",
+      "maximum_compatible_invisible_mass": "61/151",
+      "true_invisible": "19/64"
+    },
+    {
+      "depth": 3,
+      "lambda": "3/4",
+      "maximum_compatible_invisible_mass": "275/1208",
+      "true_invisible": "91/1024"
+    },
+    {
+      "depth": 4,
+      "lambda": "3/4",
+      "maximum_compatible_invisible_mass": "23/151",
+      "true_invisible": "0"
+    }
+  ],
+  "depth_record_maps": [
+    {
+      "conflicting_new_records": 5,
+      "example": [
+        {
+          "new_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "old_record": [
+            1,
+            0,
+            0,
+            -1
+          ],
+          "point": [
+            "0",
+            "5/2"
+          ]
+        },
+        {
+          "new_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "old_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "point": [
+            "0",
+            "5/4"
+          ]
+        }
+      ],
+      "new_depth": 3,
+      "old_depth": 2,
+      "old_record_recoverable_from_new": false,
+      "resolution": "coarse"
+    },
+    {
+      "conflicting_new_records": 5,
+      "example": [
+        {
+          "new_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "old_record": [
+            1,
+            0,
+            0,
+            -1
+          ],
+          "point": [
+            "0",
+            "7/2"
+          ]
+        },
+        {
+          "new_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "old_record": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "point": [
+            "0",
+            "5/4"
+          ]
+        }
+      ],
+      "new_depth": 4,
+      "old_depth": 3,
+      "old_record_recoverable_from_new": false,
+      "resolution": "coarse"
+    },
+    {
+      "conflicting_new_records": 0,
+      "example": [],
+      "new_depth": 3,
+      "old_depth": 2,
+      "old_record_recoverable_from_new": true,
+      "resolution": "aligned"
+    },
+    {
+      "conflicting_new_records": 0,
+      "example": [],
+      "new_depth": 4,
+      "old_depth": 3,
+      "old_record_recoverable_from_new": true,
+      "resolution": "aligned"
+    }
+  ],
+  "largest_tail_violation": 0.07364174267610463,
+  "map_cell_comparisons": 484,
+  "unconstrained_outside_class": [
+    {
+      "case": "lambda0_N400_r004",
+      "design": "coarse_d4",
+      "max_violation": 0.03260300814411937,
+      "selection_probabilities": [
+        0.5153351480029675,
+        0.46739699185588063,
+        0.9876543209876525
+      ]
+    },
+    {
+      "case": "lambda0_N400_r010",
+      "design": "coarse_d4",
+      "max_violation": 0.01807910090856668,
+      "selection_probabilities": [
+        0.4819208990914333,
+        0.566468432095484,
+        0.9876543209876516
+      ]
+    },
+    {
+      "case": "lambda1_N400_r006",
+      "design": "coarse_d4",
+      "max_violation": 0.061042502870420234,
+      "selection_probabilities": [
+        0.43895749712957977,
+        0.5175942727481043,
+        0.9876543209876544
+      ]
+    },
+    {
+      "case": "lambda2_N400_r010",
+      "design": "coarse_d4",
+      "max_violation": 0.028571677283037666,
+      "selection_probabilities": [
+        0.47142832271696233,
+        0.5377229406839591,
+        0.9876543209876532
+      ]
+    },
+    {
+      "case": "lambda2_N400_r006",
+      "design": "coarse_d4",
+      "max_violation": 0.04082951952974523,
+      "selection_probabilities": [
+        0.5113166667674178,
+        0.45917048047025477,
+        0.9876543209876557
+      ]
+    },
+    {
+      "case": "lambda2_N400_r009",
+      "design": "coarse_d4",
+      "max_violation": 0.009060696288927805,
+      "selection_probabilities": [
+        0.5169891446695046,
+        0.4909393037110722,
+        0.9876543209876546
+      ]
+    },
+    {
+      "case": "lambda2_N400_r016",
+      "design": "coarse_d4",
+      "max_violation": 0.07364174267610463,
+      "selection_probabilities": [
+        0.4263582573238954,
+        0.4582781312492782,
+        0.9876543209876544
+      ]
+    },
+    {
+      "case": "lambda2_N400_r000",
+      "design": "coarse_d4",
+      "max_violation": 0.07204070419914793,
+      "selection_probabilities": [
+        0.42795929580085207,
+        0.45952334560669383,
+        0.9876543209876554
+      ]
+    },
+    {
+      "case": "lambda0_N400_r004",
+      "design": "coarse_d3",
+      "max_violation": 0.029976005544561923,
+      "selection_probabilities": [
+        0.5182315863442472,
+        0.4700239944554381,
+        0.9722222222222219
+      ]
+    },
+    {
+      "case": "lambda0_N400_r010",
+      "design": "coarse_d3",
+      "max_violation": 0.010549092532959548,
+      "selection_probabilities": [
+        0.48945090746704045,
+        0.5753194935994044,
+        0.9722222222222237
+      ]
+    },
+    {
+      "case": "lambda1_N400_r006",
+      "design": "coarse_d3",
+      "max_violation": 0.045356937352045934,
+      "selection_probabilities": [
+        0.45464306264795407,
+        0.5360898188040146,
+        0.9722222222222239
+      ]
+    },
+    {
+      "case": "lambda2_N400_r016",
+      "design": "coarse_d3",
+      "max_violation": 0.027428457598670186,
+      "selection_probabilities": [
+        0.4725715424013298,
+        0.5079512343192456,
+        0.9722222222222231
+      ]
+    },
+    {
+      "case": "lambda2_N400_r000",
+      "design": "coarse_d3",
+      "max_violation": 0.019540538146870512,
+      "selection_probabilities": [
+        0.4804594618531295,
+        0.5158956504766168,
+        0.9722222222222213
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "all_comparisons_passed": true,
+  "scope": "Resumption rerun: 120 parent samples and fits; 3 Stage20 initial projections; 3 Stage21 refined projections; independent verification of all saved and rerun results.",
+  "observed_input_json_count": 120,
+  "fit_json_count": 120,
+  "latent_array_count": 600,
+  "initial_projection_rerun_count": 3,
+  "refined_projection_rerun_count": 3,
+  "all_120_sharp_projections_computed": false,
+  "checks": {
+    "observed_inputs_byte_identical": true,
+    "fits_byte_identical": true,
+    "trials.csv_byte_identical": true,
+    "summary.csv_byte_identical": true,
+    "projection_certificates_identical_excluding_seconds": true,
+    "refined_projection_certificates_identical_excluding_seconds": true,
+    "stage22_sampling_results.json_identical_excluding_seconds": true,
+    "projection_results.json_identical_excluding_seconds": true,
+    "refined_projection_results.json_identical_excluding_seconds": true,
+    "independent_verification.json_identical_excluding_seconds": true,
+    "600_latent_arrays_identical": true,
+    "unchanged_stage20_column_certificates.py": true,
+    "unchanged_stage20_verify_stage20.py": true,
+    "unchanged_stage21_refine.py": true,
+    "unchanged_stage21_verify_stage21.py": true
+  }
+}

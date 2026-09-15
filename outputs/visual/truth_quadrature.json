@@ -1,0 +1,14 @@
+{
+  "0.55": {
+    "epsabs": 1e-13,
+    "max_error_estimate": 9.274623707741313e-14,
+    "sum_error_estimates": 5.59585989731251e-13,
+    "total_mass": 1.0
+  },
+  "0.9": {
+    "epsabs": 1e-13,
+    "max_error_estimate": 9.534913741136538e-14,
+    "sum_error_estimates": 4.93604525473365e-13,
+    "total_mass": 1.0000000000000002
+  }
+}

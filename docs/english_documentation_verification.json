@@ -1,0 +1,193 @@
+{
+  "passed": true,
+  "documentation_edition": "English documentation for unpublished 0.1.0rc1",
+  "generated_at_utc": "2026-09-15T02:29:35.424776+00:00",
+  "scope": "English documentation and reading links; original scientific implementation, settings, results and certificates preserved.",
+  "base_archive": "bivsurv-luminosity-0.1.0rc1-github-ready.zip",
+  "base_archive_sha256": "70ccb64f88c7c198b0ef6a4d635343048e1d6d252245c6502d3a0fe64c973bc6",
+  "base_archive_manifest_check": {
+    "files_checked": 3847,
+    "failures": []
+  },
+  "source_preservation": {
+    "protected_original_files": 3844,
+    "protected_files_changed": [],
+    "original_python_files_preserved": 66,
+    "original_outputs_visual_files_preserved": 943,
+    "original_reference_experiment_files_preserved": 2860,
+    "original_validation_reference_files_preserved": 7,
+    "original_japanese_markdown_preserved": 16,
+    "original_japanese_latex_preserved": 6,
+    "original_license_citation_metadata_and_pyproject_preserved": true,
+    "original_notebook_code_cells_outputs_counts_metadata_preserved": true,
+    "existing_files_intentionally_changed": [
+      "README.md",
+      "RELEASE_NOTES.md",
+      "SHA256SUMS",
+      "quickstart.ipynb"
+    ],
+    "deleted_original_files": []
+  },
+  "documentation": {
+    "passed": true,
+    "english_markdown_files": 24,
+    "preserved_japanese_markdown_with_english_counterparts": 16,
+    "mapped_japanese_markdown_sources": 16,
+    "english_counterparts": 16,
+    "preserved_japanese_latex_fragments": 6,
+    "local_link_destinations_checked": 155,
+    "notebook_markdown_cells_checked": 3,
+    "additional_text_files_scanned": 2987,
+    "errors": [],
+    "scope": "Documentation inventory, original-source hashes, local link paths and language scan. Not semantic translation certification, external URL checking, or scientific validation."
+  },
+  "numeric_token_retention": {
+    "passed": true,
+    "checks": [
+      {
+        "source": "docs/RESULTS_ja.md",
+        "tokens_checked": 9,
+        "missing": []
+      },
+      {
+        "source": "docs/RELEASE_CHECKLIST_ja.md",
+        "tokens_checked": 4,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage22/README_ja.md",
+        "tokens_checked": 0,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage22/RESUMPTION_ja.md",
+        "tokens_checked": 6,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage22/SUMMARY_ja.md",
+        "tokens_checked": 19,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage22/THEORY_ja.md",
+        "tokens_checked": 15,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage23/README_ja.md",
+        "tokens_checked": 3,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage23/SUMMARY_ja.md",
+        "tokens_checked": 18,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage23/THEORY_ja.md",
+        "tokens_checked": 22,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage24/README_ja.md",
+        "tokens_checked": 3,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage24/SUMMARY_ja.md",
+        "tokens_checked": 12,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage24/THEORY_ja.md",
+        "tokens_checked": 5,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage25/README_ja.md",
+        "tokens_checked": 3,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage25/SUMMARY_ja.md",
+        "tokens_checked": 9,
+        "missing": []
+      },
+      {
+        "source": "reference_experiments/stage25/THEORY_ja.md",
+        "tokens_checked": 13,
+        "missing": []
+      }
+    ],
+    "scope": "Presence of source decimals, scientific-notation tokens, and simple fractions in complete Markdown translations; not semantic equivalence."
+  },
+  "executed_checks": {
+    "unit_tests": {
+      "passed": true,
+      "passed_count": 11,
+      "output": "...........                                                              [100%]\n11 passed in 0.57s"
+    },
+    "public_count_refit": {
+      "passed": true,
+      "mass_array_exact_match": true,
+      "max_abs_difference": 0.0,
+      "mass_cells": 1156,
+      "scope": "One representative refit using only public counts, model, and initial mass."
+    },
+    "quickstart_execution": {
+      "passed": true,
+      "code_cells_executed": 3,
+      "errors": [],
+      "run_location": "repository root",
+      "distributed_code_and_stored_outputs_modified": false,
+      "scope": "Execution of the existing public-count quickstart, including its saved-fit assertion and saved-figure display."
+    },
+    "smoke_benchmark": {
+      "catalogues": 4,
+      "dense_step_comparisons": 4,
+      "fit_invariants": 4,
+      "fresh_rerun_comparison": {},
+      "global_certificate_for_new_fits": false,
+      "max_dense_indexed_update_difference": 5.204170427930421e-18,
+      "max_score": 9.807777889507605e-08,
+      "metric_comparisons": 28,
+      "passed": true,
+      "public_tables": 12,
+      "quadrature_tightening_max_difference": 2.4483884387079577e-19,
+      "true_marginal_max_difference": 9.020562075079397e-17
+    },
+    "editable_install": {
+      "passed": true,
+      "command": "python -m pip install --no-deps --no-build-isolation -e .",
+      "import_version": "0.1.0rc1"
+    }
+  },
+  "new_helper": "scripts/check_documentation.py (documentation/integrity only)",
+  "runtime": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "not_executed": [
+    "Full 480-fit benchmark rerun",
+    "All-figure regeneration",
+    "Archived Stage 22-25 fitting or global searches",
+    "Archived Stage 22-25 proof-verifier reruns",
+    "External-link network checks",
+    "Full manuscript translation",
+    "Remote GitHub operations or hosted CI"
+  ],
+  "publication": {
+    "repository_name": "bivsurv-luminosity",
+    "version": "0.1.0rc1",
+    "license": "BSD-3-Clause",
+    "remote_operations_performed": false,
+    "repository_url_added": false,
+    "doi_added": false,
+    "release_date_added": false
+  },
+  "archive_validation": "After this file was written, the root manifest was regenerated, the final archive was extracted to a separate directory, and checks were executed there. See the separately supplied final-package verification report for those results."
+}

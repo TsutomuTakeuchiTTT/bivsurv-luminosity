@@ -1,0 +1,14 @@
+coarse_d3__lambda0_N400_r004 GEM 80 q>= 0.5 stationary 6.46560153258456e-15 elapsed 13.484766405999949
+coarse_d3__lambda0_N400_r010 GEM 80 q>= 0.5 stationary 9.446723774609268e-15 elapsed 27.00643732100002
+coarse_d3__lambda1_N400_r006 GEM 80 q>= 0.5 stationary 6.2809939916015245e-15 elapsed 40.56585170699998
+coarse_d3__lambda2_N400_r000 GEM 80 q>= 0.5 stationary 4.912543705383918e-16 elapsed 54.14694078000002
+coarse_d3__lambda2_N400_r016 GEM 80 q>= 0.5 stationary 3.6762095506115237e-16 elapsed 67.87299178499995
+coarse_d4__lambda0_N400_r004 GEM 80 q>= 0.5 stationary 2.31751300688626e-15 elapsed 86.58748042499997
+coarse_d4__lambda0_N400_r010 GEM 80 q>= 0.5 stationary 4.1413012683291826e-14 elapsed 103.78374051799995
+coarse_d4__lambda1_N400_r006 GEM 80 q>= 0.5 stationary 1.4969466185966052e-16 elapsed 120.52739302600003
+coarse_d4__lambda2_N400_r000 GEM 80 q>= 0.5 stationary 2.138451004636719e-16 elapsed 139.34250196699998
+coarse_d4__lambda2_N400_r006 GEM 80 q>= 0.5 stationary 9.609234256712459e-15 elapsed 157.838548295
+coarse_d4__lambda2_N400_r009 GEM 80 q>= 0.5 stationary 2.1440433231077252e-15 elapsed 175.36291710600005
+coarse_d4__lambda2_N400_r010 GEM 80 q>= 0.5 stationary 5.847020197366456e-14 elapsed 192.974445929
+coarse_d4__lambda2_N400_r016 GEM 80 q>= 0.5 stationary 1.4923376833283242e-15 elapsed 210.877335508
+{'stage': 24, 'selected_violating_cases': 13, 'certified_GEM_updates': 1040, 'GEM_active_sets': {'none': 417, 'tail2': 189, 'tail1': 434}, 'all_steps_feasible_and_certified_increasing': True, 'independent_stationary_candidates': 13, 'max_stationarity_upper': 5.847020197366456e-14, 'global_likelihood_maxima_certified': False, 'fixed_step_GEM_claimed_converged': False, 'invisible_removal_alone_feasible_count': 1, 'exact_four_group_tests': 256, 'four_group_active_sets': {'none': 90, 'both': 52, 'tail1': 57, 'tail2': 57}, 'numeric_Mstep_comparisons': 16, 'max_numeric_Mstep_objective_difference': 6.661338147750939e-16, 'new_parent_draws': 0, 'training_predictors_changed': False, 'confidence_sets_changed': False, 'new_coverage_evaluations': 0, 'software': {'python': '3.13.5', 'numpy': '2.3.5'}, 'seconds': 210.90296533699996}

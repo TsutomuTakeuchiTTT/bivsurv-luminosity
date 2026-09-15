@@ -1,0 +1,336 @@
+% 第23段階の追加記録. 第22段階の本文に続けて追加する.
+% 既存の \bm, \bbo, proposition, proof, booktabs, hyperrefを使用する.
+% 新しい引用キー, 文献環境, 文書終了命令は追加しない.
+% 根拠資料: bivariate_survival_reconstruction_stage23.zip.
+% 数値表は第23段階の保存結果. 第24段階の新しい再適合とは区別する.
+
+\section{第23段階の目的と観測深度の対比較}
+\label{sec:stage23_scope}
+
+第22段階の120母標本と120000天体を再利用し,
+潜在値, 検出限界の層番号と学習・検証への所属を固定したまま,
+観測深度と検出値の記録区間を変更する.
+六設計で720回の評価を行うが, 独立な母標本は120個のままであり,
+新しい乱数は生成しない.
+観測法則への適合, 親生存関数の参考値, 親信頼集合への真値所属,
+および母集団の識別範囲を分けて調べる.
+
+検出条件$Z_b\le C_b$と等号を検出に含める規約を維持する.
+A, B, Cだけをカタログへ収録し,
+Dの個数や親標本数を条件付き尤度へ追加しない.
+検出値の区間番号, 検出指示と限界を記録し,
+非検出成分を区間代表値へ置き換えない.
+候補は全実数平面上のBorel確率測度であり,
+評価真値の支持へ切り詰めない.
+
+\section{共通親クラスと六つの記録設計}
+\label{sec:stage23_design}
+
+最初の二つの交差限界を固定し, 第三層だけを深くする.
+\begin{align}
+\bm c_1&=(2,1),\qquad \bm c_2=(1,2),\notag\\
+\bm c_3&=(d,d),\qquad d\in\{2,3,4\}.
+\label{eq:stage23_limits}
+\end{align}
+各座標の記録境界は, 粗い設計では$\{1\}$,
+細かい設計では$\{1,3/2,2,3,4\}$とする.
+後者は対象点と以前の検出限界の座標を保持する.
+生存評価点は全設計で
+\begin{align}
+\bm t_1&=(1,1),\qquad \bm t_2=(3/2,1),\notag\\
+\bm t_3&=(2,2)
+\label{eq:stage23_targets}
+\end{align}
+に固定する.
+
+共通の親クラスには
+\begin{align}
+P(D_{(2,1)})&\le\frac12,\qquad
+P(D_{(1,2)})\le\frac12
+\label{eq:stage23_common_tail_class}
+\end{align}
+を課す.
+$d\ge2$なら$D_{(d,d)}$は両方の固定D領域に含まれるので,
+第三層の上界$P(D_{(d,d)})\le1/2$は冗長である.
+したがって親クラスは六設計で共通であり,
+深くした設計だけに真の不可視確率を上界として与えることはしない.
+
+評価真値は第22段階と同じ連続密度
+\begin{align}
+f_\lambda(z_1,z_2)
+&=\frac1{16}\left[1+\lambda
+\left(1-\frac{z_1}{2}\right)\left(1-\frac{z_2}{2}\right)\right]
+\bbo\{(z_1,z_2)\in(0,4)^2\},
+\label{eq:stage23_true_density}\\
+\lambda&\in\{-3/4,0,3/4\}
+\label{eq:stage23_true_parameters}
+\end{align}
+である.
+親標本数400と1600, 各条件20反復を維持する.
+密度族, 真の支持と真のセル質量は評価専用であり,
+学習予測と点推定へ渡さない.
+
+\section{初期測度を保持した表現変更}
+\label{sec:stage23_reference_measure}
+
+計算表現ごとに一様質量を置き直すと,
+観測設計と同時に初期分布まで変わってしまう.
+今回は独立な二周辺を持つ同じ連続測度$R$を固定し,
+その周辺CDFを
+\begin{align}
+F_R(z)&=\begin{cases}
+1/\{3(2-z)\},&z\le1,\\
+z/3,&1<z\le2,\\
+1-1/\{3(z-1)\},&z>2
+\end{cases}
+\label{eq:stage23_reference_cdf}
+\end{align}
+とする.
+三領域$(-\infty,1]$, $(1,2]$, $(2,\infty)$に各$1/3$を持つため,
+基準設計の観測9クラスに各$1/9$を与える.
+新しいクラスの初期質量は, 同じ$R$のセル積分を足して作る.
+参考生存値の内部配分にも$R$の条件付き配分を保持する.
+これは初期条件の指定であり, ベイズ事前分布でも,
+候補親分布に対する密度形状制約でもない.
+
+基準となる粗い記録・深度2では,
+120標本全ての公開個数と学習予測が第22段階と厳密に一致した.
+点推定と参考生存値の最大差は約$1.11\times10^{-16}$だった.
+全限界で完全不可視な領域$I_d=(d,\infty)^2$について,
+\begin{align}
+R(I_d)&=\frac{1}{9(d-1)^2}
+\label{eq:stage23_initial_invisible_mass}
+\end{align}
+であり, 原EMは各設計でこの初期質量を保存する.
+$d=2,3,4$の値は$1/9,1/36,1/81$である.
+この減少は不可視領域自体の変化によるものであり,
+その領域の総質量を観測から推定したことを意味しない.
+
+\section{標本の推定と信頼集合}
+\label{sec:stage23_sample_inference}
+
+学習予測は共通初期測度から, 学習記録だけの有理数2EM更新で作る.
+全データ点推定は学習・検証個数を合算し,
+原EMを平均正スコア$10^{-8}$, 最大4000更新で実行する.
+全データ適合を検証予測へ戻さない.
+学習予測$\widetilde P$と検証記録から,
+\begin{align}
+\mathcal C
+&=\left\{P\in\mathfrak P_{\mathrm{tail}}:
+L_{\mathrm{val}}(P)\ge
+\frac1{20}L_{\mathrm{val}}(\widetilde P)\right\}
+\label{eq:stage23_confidence_set}
+\end{align}
+を用いる.
+真値の所属は, 予測尤度と真の検証尤度の比の対数を有理数区間で挟んで判定する.
+全可能記録の正規化と独立な学習・検証分割を維持する.
+
+各候補について, 真の記録法則へのTV誤差,
+三対象の参考生存RMSE, 数値停止, 尾部所属と不可視初期質量の保存を別々に記録する.
+原EMは尾部制約付き最適化ではないため,
+最終候補がクラス外でも事後修復せず, その状態を診断として返す.
+その標本を信頼集合の被覆集計から除外しない.
+
+\section{母集団識別集合の独立な計算}
+\label{sec:stage23_population_problem}
+
+全記録の真の母集団確率$\pi_{0,jr}$が正確に既知である場合を,
+有限標本の信頼集合とは別に調べる.
+指定した記録精度と深度$d$で同じ法則を与える共通尾部クラス内の親集合を,
+$\mathfrak F_d(P_0)$と書く.
+対象係数も保存した全セル質量$\bm m$に対して,
+\begin{align}
+\bm m&\ge0,\qquad \bm1^{\mathsf T}\bm m=1,\notag\\
+(\bm A_{jr}-\pi_{0,jr}\bm V_j)\bm m&=0
+\quad\text{for all }j,r,\notag\\
+\bm V_j\bm m&\ge\frac12
+\quad\text{for all }j
+\label{eq:stage23_population_constraints}
+\end{align}
+を課し, $\bm c^{\mathsf T}\bm m$の最小・最大を求める.
+これは線型計画である.
+$\pi_{0,jr}=0$も母集団法則の条件であり,
+標本で未出現だった記録を確率ゼロと推定する操作ではない.
+
+数値LPの提案から, 活性等式を有理数線型代数で解き,
+可行な端点親質量を再構成する.
+$E\bm m=\bm b$, $G\bm m\le\bm h$という最小化問題では,
+自由な$\bm y$と非正な$\bm z$が
+\begin{align}
+E^{\mathsf T}\bm y+G^{\mathsf T}\bm z&\le\bm c
+\label{eq:stage23_dual_feasibility}
+\end{align}
+を満たせば, $\bm b^{\mathsf T}\bm y+\bm h^{\mathsf T}\bm z$が下界となる.
+最大化には目的$-\bm c$を用いる.
+双対乗数を有理数化した後の列残差は正規化乗数で補正し,
+全列不等式を確認する. 親クラス自体を緩めて補正するものではない.
+
+\section{境界を保持した記録における鋭い識別範囲}
+\label{sec:stage23_identification_formula}
+
+最深層の可視条件付き分布を$Q_d=P(\,\cdot\mid I_d^c)$とする.
+深い層の各記録から, 対象の生存指示と浅い両層の収録指示を判定できると仮定する.
+細かい記録では, 全セルについてこの条件を確認した.
+このとき深い記録の母集団法則から,
+\begin{align}
+s_d&=Q_d(G_{\bm t}),\qquad
+v_j=Q_d(D_j^c)
+\label{eq:stage23_visible_targets}
+\end{align}
+が固定される.
+
+\begin{proposition}[最深層の記録が必要な指示を判定できる場合]
+\label{prop:stage23_sharp_range}
+対象$\bm t\le(d,d)$と上の判定条件を仮定する.
+全観測法則に整合する親分布が共通尾部クラスに存在するなら,
+\begin{align}
+\theta_{\max}&=1-\max_j\frac{1}{2v_j},
+\label{eq:stage23_theta_max}\\
+\{S_P(\bm t):P\in\mathfrak F_d(P_0)\}
+&=\left[s_d,\ \theta_{\max}+(1-\theta_{\max})s_d\right]
+\label{eq:stage23_sharp_range}
+\end{align}
+となり, 両端は達成される.
+\end{proposition}
+\begin{proof}
+$P=(1-\theta)Q_d+\theta R_I$, $R_I(I_d)=1$と分解する.
+$I_d\subset G_{\bm t}$と尾部条件より,
+\begin{align}
+S_P(\bm t)&=\theta+(1-\theta)s_d,\qquad
+(1-\theta)v_j\ge\frac12
+\label{eq:stage23_mixture_constraints}
+\end{align}
+となる. 従って$0\le\theta\le\theta_{\max}$を得る.
+全観測法則を実現する可視分布として真の条件付き分布を選び,
+$I_d$上の任意の$R_I$を用いれば, この区間の全$\theta$を実現できる.
+これは識別問題の証明であり, 真値を学習予測器へ入力する操作ではない.
+\end{proof}
+
+評価真値を使って$d_0=P_0(I_d)$,
+$q_{\min}=\min_jP_0(D_j^c)$と書けば,
+\begin{align}
+s_d&=\frac{S_0(\bm t)-d_0}{1-d_0},\qquad
+S_{\max}=1-\frac{1-S_0(\bm t)}{2q_{\min}}
+\label{eq:stage23_true_law_expression}
+\end{align}
+となる.
+今回$q_{\min}$は固定した浅い層で決まるため,
+深度を増して下端が真値へ近づいても上端は同じままとなり得る.
+特に$d=4$で真の不可視確率が0となっても,
+候補分布の不可視確率まで0と決めることはできない.
+
+\section{粗い記録では深度増大が情報保存にならない例}
+\label{sec:stage23_information_loss}
+
+点$(5/4,5/4)$と$(5/2,5/2)$は,
+新限界$(3,3)$と粗い区間のもとでは同じ高・高のA記録を返す.
+しかし旧限界$(2,2)$では前者はA, 後者はDである.
+従って新しい粗い記録だけから, 旧限界での記録を復元できない.
+
+\begin{table}[htbp]
+\centering
+\caption{$\lambda=0$と対象$S_P(2,2)$の母集団識別範囲.
+共通の親クラスで計算した鋭い範囲であり, 信頼区間ではない.}
+\label{tab:stage23_population_ranges}
+\begin{tabular}{ccc}
+\toprule
+深度$d$ & 粗い記録 & 旧境界を保持した細かい記録 \\
+\midrule
+2 & $[0,2/5]$ & $[0,2/5]$ \\
+3 & $[2/15,1/2]$ & $[1/5,2/5]$ \\
+4 & $[3/16,1/2]$ & $[1/4,2/5]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+粗い記録では上端が$2/5$から$1/2$へ広がり,
+深度の増加だけでは識別集合の包含を保証しない.
+細かい記録では旧閾値2,3を残しているため,
+新しい記録から旧Dへの除外も含めた旧記録を復元できる.
+この場合には母集団識別集合の包含が成立するが,
+標本ごとのSplit likelihood信頼集合の包含とは区別する.
+
+最深の細かい設計でも, 表の識別幅は$3/20$残る.
+真の$P_0(I_4)=0$に対し, 同じ記録法則を与える候補には
+$\theta_{\max}=1/5$を置けるので,
+上端は$1/5+(4/5)(1/4)=2/5$となる.
+親総数や未収録D個数を追加情報として使わない現在のモデルの帰結である.
+
+\section{標本結果と尾部クラス外の候補}
+\label{sec:stage23_results}
+
+\begin{table}[htbp]
+\centering
+\caption{$\lambda=0$, 親標本1600天体における三点参考生存RMSEの20反復平均.
+共通初期測度の内部配分規則に基づく参考値である.}
+\label{tab:stage23_reference_rmse}
+\begin{tabular}{ccc}
+\toprule
+深度$d$ & 粗い記録 & 細かい記録 \\
+\midrule
+2 & 0.108534 & 0.108005 \\
+3 & 0.033827 & 0.026702 \\
+4 & 0.022774 & 0.014930 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+この対照では深度と記録の細分化による改善が見られたが,
+全母分布・全反復での単調な誤差減少を主張しない.
+全720評価で原EMは25--959更新の間に数値停止した.
+この停止だけから大域最適性を認定しない.
+
+親真値は719評価で信頼集合に入り, 一件は棄却された.
+棄却例は\texttt{aligned\_d2/lambda2\_N400\_r007}であり,
+$\log E_0\simeq3.68197195>\log20$だった.
+算術的な判定未確定はなかった.
+各設定20反復の実現結果であり,
+719/720を正確な被覆確率とみなしたり,
+720回を独立な二項試行として扱ったりしない.
+
+また, 未制約EMの13候補が共通尾部クラスを外れた.
+粗い記録・深度3で5件, 深度4で8件であり, 全て親標本400の設定である.
+収録確率下限からの最大逸脱は約0.07364だった.
+これらを制約付きMLEとは呼ばず, 事後修復せずに保存した.
+点推定にも尾部条件を要求する場合には,
+第19段階の制約付きM-stepを適用する必要がある.
+
+\section{証拠と保存範囲}
+\label{sec:stage23_record}
+
+三母分布, 六設計, 三対象の54母集団射影について,
+端点親分布と全列双対不等式を検査した.
+最大端点囲い幅は$1/2703999999937808$, 約$3.70\times10^{-16}$だった.
+細かい記録の27射影は, 閉形式と54個の別の明示的親分布でも照合した.
+720標本全ての鋭い信頼射影を追加したわけではない.
+
+独立検証器は720公開入力, 720学習予測と真値所属,
+54射影証拠, 108端点親分布, 2268全列双対不等式を確認した.
+追加監査は510直接積分比較, 5760記録所属比較,
+480選択集合包含, 41初期質量集約と484セルの記録情報比較を含む.
+四種類の有害な証拠改ざんも拒否した.
+
+第23段階の保存記録では, 全六設計の標本計算と54母集団射影を再実行し,
+720入力JSON, 720適合JSON, 54証拠JSONと集約CSVの一致を確認している.
+本LaTeX記録の作成時には保存結果の独立検証を再実行した.
+その再確認では新しい乱数生成, 数値EMの再適合,
+LPと非線型最適化を行っていない.
+
+保存パッケージは
+\nolinkurl{bivariate_survival_reconstruction_stage23.zip}である.
+\texttt{depth\_study.py}に対比較,
+\texttt{population\_fibers.py}に母集団識別範囲,
+\texttt{audit\_controls.py}に追加監査,
+\texttt{verify\_stage23.py}に独立検証を記録した.
+\begin{verbatim}
+python depth_study.py --outdir new_outputs
+python verify_stage23.py --outdir outputs
+\end{verbatim}
+集約値は\nolinkurl{outputs/summary.csv},
+識別範囲は\nolinkurl{outputs/population_ranges.csv},
+再現性は\nolinkurl{outputs/reproducibility.json}にある.
+
+今回の到達点は, 観測深度, 記録情報, 初期条件と識別範囲を分離して比較し,
+尾部クラス外の点推定候補を明示的に検出したことである.
+次段階ではこの13件を対象に, 同じ入力と親クラスを保ち,
+制約付きM-stepの可行性, 尤度増加と停止診断を検証する.

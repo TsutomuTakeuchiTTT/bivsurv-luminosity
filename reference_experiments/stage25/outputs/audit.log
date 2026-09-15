@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "main_cases": 13,
+  "all_precision_achieved": true,
+  "nodes": 537,
+  "leaves": 275,
+  "maximum_global_mean_gap_upper": 9.320517628688491e-07,
+  "maximum_total_gap_upper": 0.00027588732180917934,
+  "GEM80_minimum_global_gap_lower": 2.8312709804092922e-05,
+  "GEM80_maximum_global_gap_upper": 0.000249651765810805,
+  "deterministic_feasible_candidates_checked": 312,
+  "exact_ratio_invariance_checks": 4848,
+  "selection_probability_monotonicity_checks": 936,
+  "all_13_searches_reexecuted": true,
+  "certificate_fields_identical_except_seconds": true,
+  "unchanged_stage24_candidate_masses": true,
+  "new_random_samples": false,
+  "GEM_refitting": false,
+  "confidence_sets_recomputed": false,
+  "same_likelihood_theta_max": 0.006823529411754671
+}

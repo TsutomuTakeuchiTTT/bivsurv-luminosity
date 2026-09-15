@@ -1,0 +1,31 @@
+{
+  "preparation_date": "2026-09-15",
+  "version": "0.1.0rc1",
+  "version_reason": "License and packaging-only preparation before the first public prerelease.",
+  "input_archive": "bsv_visual_benchmark_code_rc1.zip",
+  "input_archive_sha256": "0aaaf8f7f1b845a992b886cfc9af4e49b273f6e5d76233d20ce8faa580f7bbd2",
+  "modified": [
+    ".gitignore",
+    "CITATION.cff",
+    "README.md",
+    "README_ja.md",
+    "SHA256SUMS",
+    "docs/RELEASE_CHECKLIST_ja.md",
+    "pyproject.toml"
+  ],
+  "removed": [
+    "docs/LICENSE_BSD3_PROPOSED.txt"
+  ],
+  "added": [
+    ".github/workflows/tests.yml",
+    "LICENSE",
+    "RELEASE_NOTES.md",
+    "docs/LICENSE_SCOPE.md",
+    "docs/publication_changes.json",
+    "docs/publication_preparation_verification.json",
+    "scripts/check_release.py"
+  ],
+  "remote_actions_performed": false,
+  "github_connection_installed": false,
+  "unchanged_protected_files": 3826
+}

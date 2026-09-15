@@ -1,0 +1,83 @@
+[
+  {
+    "case": "lambda0_N400_r000",
+    "lower_bracket": [
+      "335369580490454402865997482303544013333823662254274967364904422479788026307960774128056021699/1967777741445640787004533591439007799866859600000000000000000000000000000000000000000000000000",
+      "57002273613/333333333334"
+    ],
+    "seconds": 2.3762377030000152,
+    "upper_bracket": [
+      "176099689701/250000000000",
+      "47702188192622782734361189034335677653302912788497885798315260811526851991361688154265169/67669293482652536980765712482798549642500000000000000000000000000000000000000000000000000"
+    ],
+    "verification": {
+      "certificates": 24,
+      "column_inequalities": 264,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 23,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 35,
+      "vertex_enumeration_called": false
+    }
+  },
+  {
+    "case": "lambda1_N400_r000",
+    "lower_bracket": [
+      "69695993254477756970473253496611498122409752324185133262075481599423259599937242864021/329618093801326043223799023035781009600000000000000000000000000000000000000000000000000",
+      "212232088405/1000000000001"
+    ],
+    "seconds": 1.146835233000047,
+    "upper_bracket": [
+      "4688391887/6250000000",
+      "3679160222703468489113832979984891534758392131028576917902152084807994161284683917677638761205969122597812939759601/4899470486215265453466708110559483228679313453017998703110825046500000000000000000000000000000000000000000000000000"
+    ],
+    "verification": {
+      "certificates": 14,
+      "column_inequalities": 154,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 13,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 25,
+      "vertex_enumeration_called": false
+    }
+  },
+  {
+    "case": "lambda2_N400_r000",
+    "lower_bracket": [
+      "41189653016566527603055992238803423099657018803817851007161236476474758396181399927467649996619/200085514822999058523486832029144553442476194372300000000000000000000000000000000000000000000000",
+      "206588962408/1000000000001"
+    ],
+    "seconds": 1.3205308779999996,
+    "upper_bracket": [
+      "28577995218784737983480917/40988268398227410000000000",
+      "1023783385951448093325573540540328138278014590669730166340383958537136210849/1466898037673420833280806500000000000000000000000000000000000000000000000000"
+    ],
+    "verification": {
+      "certificates": 16,
+      "column_inequalities": 176,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 15,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 22,
+      "vertex_enumeration_called": false
+    }
+  }
+]

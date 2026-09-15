@@ -1,0 +1,14 @@
+{
+  "EM_fits": 480,
+  "elapsed_seconds": 8.289028727999948,
+  "estimator": "indexed D-completion EM; matched against recovered Fraction implementation",
+  "global_optimality_certificates": "Not computed for these new high-resolution fits",
+  "matplotlib": "3.10.8",
+  "new_parent_objects": 840000,
+  "new_parent_samples": 120,
+  "numpy": "2.3.5",
+  "paired_design_evaluations": 240,
+  "python": "3.13.5",
+  "random_model": "Gaussian parent; deterministic quadrature truth; selected latent values not used as parent truth",
+  "scipy": "1.17.0"
+}

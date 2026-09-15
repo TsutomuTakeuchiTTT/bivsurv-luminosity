@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Bivariate survival estimation for two-band luminosity catalogues"
+message: "Please cite this software and the exact version used. No archival DOI is assigned to this preparation copy."
+type: software
+version: 0.1.0rc1
+license: BSD-3-Clause
+authors:
+  - family-names: Takeuchi
+    given-names: Tsutomu T.
+abstract: "D-completion estimation under two-band union selection, with reproducible Gaussian luminosity benchmarks and archived finite-model validation code."
+keywords:
+  - astronomy
+  - luminosity-function
+  - survival-analysis
+  - truncation
+  - censoring
+  - reproducible-research

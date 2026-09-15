@@ -1,0 +1,32 @@
+{
+  "all_em_stopped": true,
+  "all_invisible_mass_invariants_checked": true,
+  "all_sharp_sample_projections_performed": false,
+  "baseline_fit_max_abs_difference": 1.1102230246251565e-16,
+  "checks": {
+    "baseline_fit_checks": 120,
+    "baseline_prediction_exact": 120,
+    "baseline_public_exact": 120,
+    "exact_record_integrals": 510,
+    "fixed_prior_pushforward": 41,
+    "geometry_comparisons": 5760,
+    "paired_detection_monotonicity": 480
+  },
+  "design_evaluations": 720,
+  "max_iterations": 959,
+  "membership_accepted": 719,
+  "membership_undecided": 0,
+  "minimum_iterations": 25,
+  "new_random_draws": 0,
+  "outside_tail": 13,
+  "paired_distinct_parent_samples": 120,
+  "recording_designs": 6,
+  "seconds": 33.666656512999964,
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.13.5"
+  },
+  "stage": "23",
+  "survival_reference_values": 2160,
+  "unique_parent_objects": 120000
+}

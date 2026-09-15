@@ -1,0 +1,36 @@
+{
+  "input_sha256": "7f84721c09f9efef907cecaa6b3b9062b2a787b4e5b34c31a556facb91fc477a",
+  "new_main_sha256": "04947cc3a3431acb8f425145fac12d78ff9c85fd3dfe6ae2d34350c9091afc21",
+  "change": "new numerical subsection inserted; original contents retained verbatim",
+  "original_labels_preserved": 395,
+  "new_labels": 16,
+  "original_tables_preserved": 8,
+  "new_figures": 6,
+  "new_tables": 1,
+  "figure_panel_files": 15,
+  "new_BibTeX_entries": 0,
+  "bibliography_style_settings_unchanged": true,
+  "output_bibliography_entries": 25,
+  "pdf_pages": 79,
+  "main_text_pages": 35,
+  "appendix_starts_page": 36,
+  "new_subsection_pages": [
+    26,
+    33
+  ],
+  "undefined_references": false,
+  "undefined_citations": false,
+  "duplicate_labels": false,
+  "overfull_boxes": false,
+  "missing_glyphs": false,
+  "existing_nonfatal_warning": "caption: unknown document class",
+  "visually_inspected_pages": [
+    27,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "new_experiments_have_global_certificates": false
+}

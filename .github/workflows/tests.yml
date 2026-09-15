@@ -1,0 +1,39 @@
+name: Tests and smoke benchmark
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install pinned benchmark environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-pinned.txt
+          python -m pip install -e ".[test]"
+      - name: Verify the published file snapshot
+        run: python scripts/check_release.py
+      - name: Run unit tests
+        run: python -m pytest -q
+      - name: Run a small independent-output benchmark
+        run: python scripts/run_benchmark.py --replicates 1 --sizes 1000 --output outputs/smoke
+      - name: Verify the smoke benchmark
+        run: python scripts/verify_visual.py --output outputs/smoke

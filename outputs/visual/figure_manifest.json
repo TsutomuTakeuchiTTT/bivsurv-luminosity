@@ -1,0 +1,166 @@
+[
+  {
+    "caption": "A fixed subset of public A/B/C records in the shallow Gaussian rho=0.55 catalogue. Detected markers use recorded-bin centers solely for plotting. Arrow lengths are graphical, not measured uncertainties. Hidden luminosities and D objects are not plotted.",
+    "file": "observed_catalogue"
+  },
+  {
+    "caption": "True observable LF shape. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; deep.",
+    "file": "rho0.55_deep_truth_Q"
+  },
+  {
+    "caption": "Naive: both detections only. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; deep.",
+    "file": "rho0.55_deep_naive_A"
+  },
+  {
+    "caption": "D-completion reconstruction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; deep.",
+    "file": "rho0.55_deep_reconstructed_Q"
+  },
+  {
+    "caption": "Ablation: no truncation correction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; deep.",
+    "file": "rho0.55_deep_noD_Q"
+  },
+  {
+    "caption": "Signed Q-density error, shown only where both luminosities are resolved by the deepest field. Masked cells have no displayed pointwise error. The fixed density range is shared across designs and correlations.",
+    "file": "rho0.55_deep_residual_resolved"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.55_deep_marginal1"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.55_deep_marginal2"
+  },
+  {
+    "caption": "Three parent distributions sharing the fitted record law and satisfying the declared tail bounds. This is an observational-equivalence illustration, not a 95% confidence interval or a global-optimality certificate.",
+    "file": "rho0.55_deep_same_likelihood"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.55_deep_bright_probability_RMSE_Q"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.55_deep_resolved_bin_L1_Q"
+  },
+  {
+    "caption": "True observable LF shape. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; shallow.",
+    "file": "rho0.55_shallow_truth_Q"
+  },
+  {
+    "caption": "Naive: both detections only. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; shallow.",
+    "file": "rho0.55_shallow_naive_A"
+  },
+  {
+    "caption": "D-completion reconstruction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; shallow.",
+    "file": "rho0.55_shallow_reconstructed_Q"
+  },
+  {
+    "caption": "Ablation: no truncation correction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.55; shallow.",
+    "file": "rho0.55_shallow_noD_Q"
+  },
+  {
+    "caption": "Signed Q-density error, shown only where both luminosities are resolved by the deepest field. Masked cells have no displayed pointwise error. The fixed density range is shared across designs and correlations.",
+    "file": "rho0.55_shallow_residual_resolved"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.55_shallow_marginal1"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.55_shallow_marginal2"
+  },
+  {
+    "caption": "Three parent distributions sharing the fitted record law and satisfying the declared tail bounds. This is an observational-equivalence illustration, not a 95% confidence interval or a global-optimality certificate.",
+    "file": "rho0.55_shallow_same_likelihood"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.55_shallow_bright_probability_RMSE_Q"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.55_shallow_resolved_bin_L1_Q"
+  },
+  {
+    "caption": "True observable LF shape. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; deep.",
+    "file": "rho0.90_deep_truth_Q"
+  },
+  {
+    "caption": "Naive: both detections only. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; deep.",
+    "file": "rho0.90_deep_naive_A"
+  },
+  {
+    "caption": "D-completion reconstruction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; deep.",
+    "file": "rho0.90_deep_reconstructed_Q"
+  },
+  {
+    "caption": "Ablation: no truncation correction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; deep.",
+    "file": "rho0.90_deep_noD_Q"
+  },
+  {
+    "caption": "Signed Q-density error, shown only where both luminosities are resolved by the deepest field. Masked cells have no displayed pointwise error. The fixed density range is shared across designs and correlations.",
+    "file": "rho0.90_deep_residual_resolved"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.90_deep_marginal1"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.90_deep_marginal2"
+  },
+  {
+    "caption": "Three parent distributions sharing the fitted record law and satisfying the declared tail bounds. This is an observational-equivalence illustration, not a 95% confidence interval or a global-optimality certificate.",
+    "file": "rho0.90_deep_same_likelihood"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.90_deep_bright_probability_RMSE_Q"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.90_deep_resolved_bin_L1_Q"
+  },
+  {
+    "caption": "True observable LF shape. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; shallow.",
+    "file": "rho0.90_shallow_truth_Q"
+  },
+  {
+    "caption": "Naive: both detections only. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; shallow.",
+    "file": "rho0.90_shallow_naive_A"
+  },
+  {
+    "caption": "D-completion reconstruction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; shallow.",
+    "file": "rho0.90_shallow_reconstructed_Q"
+  },
+  {
+    "caption": "Ablation: no truncation correction. Except naive_A, normalized on U (detectable in at least one band at the deepest limit). Hatches mark regions without two resolved luminosities; these are masked rather than extrapolated. No smoothing. Rho 0.9; shallow.",
+    "file": "rho0.90_shallow_noD_Q"
+  },
+  {
+    "caption": "Signed Q-density error, shown only where both luminosities are resolved by the deepest field. Masked cells have no displayed pointwise error. The fixed density range is shared across designs and correlations.",
+    "file": "rho0.90_shallow_residual_resolved"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.90_shallow_marginal1"
+  },
+  {
+    "caption": "Marginal density conditional on both standardized log luminosities >= -0.5. This is not an extrapolated full-parent marginal.",
+    "file": "rho0.90_shallow_marginal2"
+  },
+  {
+    "caption": "Three parent distributions sharing the fitted record law and satisfying the declared tail bounds. This is an observational-equivalence illustration, not a 95% confidence interval or a global-optimality certificate.",
+    "file": "rho0.90_shallow_same_likelihood"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.90_shallow_bright_probability_RMSE_Q"
+  },
+  {
+    "caption": "Mean error over 20 realizations; shaded regions are empirical 10th--90th percentiles, NOT confidence bands. The same parent catalogue is reused across the two depth designs.",
+    "file": "rho0.90_shallow_resolved_bin_L1_Q"
+  }
+]

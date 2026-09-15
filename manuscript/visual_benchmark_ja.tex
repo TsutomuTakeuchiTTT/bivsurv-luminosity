@@ -1,0 +1,189 @@
+% 追加数値実験: 二変量光度分布の可視化.
+% 最新稿の数値実験節の末尾, 議論の前へ挿入する.
+% 数値はoutputs/visual/の実行結果に対応する. 新規引用キーはない.
+\FloatBarrier
+\subsection{二変量光度分布の可視的な回復}
+\label{subsec:vis_luminosity_benchmark}
+
+前の連続母分布実験は, 更新, 識別と数値保証を比較するための対照であった. ここでは二つの対数光度の相関を持つ模擬カタログを生成し, 分布の形状が観測選択によってどのように変わり, 本法がどの部分を回復するかを図で示す. 主対象は正規化された光度分布であり, 空間数密度の絶対規格化は推定しない. また, 母分布の形を推定器へ仮定するのではなく, 既知の連続母分布を評価専用に用いる.
+
+対数光度$\bm X$は平均$\bm\mu=(10.5,10.2)$, 標準偏差$\bm\sigma=(0.55,0.65)$の二変量Gaussian分布とする. 相関を$\rho=0.55,0.90$と変え, 中程度と強い相関を持つ二つの設定を用いる. これらの光度単位とパラメータは模擬実験の設定であり, 特定の観測バンドの実光度関数へ適合した値ではない. 標準化した座標を$w_b=(X_b-\mu_b)/\sigma_b$と書くと,
+\begin{align}
+\bm X&\sim N_2(\bm\mu,\bm\Sigma),\qquad
+\bm\Sigma=\begin{pmatrix}
+\sigma_1^2&\rho\sigma_1\sigma_2\\
+\rho\sigma_1\sigma_2&\sigma_2^2
+\end{pmatrix}.
+\label{eq:vis_gaussian_parent}
+\end{align}
+限界は潜在光度と独立に三つの観測層から等確率で割り当てる. $w_b$と同じ尺度で表した対数光度限界$\bm y$の最初の二層は$(1/2,-1/2)$と$(-1/2,1/2)$とする. 第三層を$(-1/2,-1/2)$とした浅い設計と, $(-3/2,-3/2)$とした深い設計を比較する. 原光度では限界を低くすることが深い観測に対応する. 同じ潜在値と観測層番号を二つの設計で使い, 深度の比較へ別の乱数変動を混ぜない.
+
+記録境界は各標準化座標の$[-4,4]$に間隔$1/4$で置き, 両端に非有界区間を残す. 実際の計算では$\bm Z=-\bm X$へ変換し, 検出の等号を含む$(l,u]$型の記録とする. 全限界は事前指定した記録境界と一致する. この場合, 境界単点はその左側の$Z$区間と同じ観測列を持つので, それらをまとめた$34\times34=1156$個の確率質量を用いる. 親のGaussian支持に基づいてセルを除外しない. 数値図では有限幅の$32\times32$ビンを表示するが, 非有界セルの質量も正規化と推定に保持する.
+
+親標本数は1000, 4000, 16000とし, 各相関と標本数について20反復を行った. 新たな独立母標本は120個, 総親天体数は840000である. 同じ母標本の二設計で240評価を行う. 基準図には各設定の親16000天体・反復番号0をあらかじめ指定した. 観測されたA, B, Cの例をFigure~\ref{fig:vis_catalogue}に示す. Dの個数と潜在値は評価用にだけ保存し, 推定器には各観測層の公開記録個数表を渡す. 学習・検証の所属も選択前に独立に割り当てる.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.76\linewidth]{observed_catalogue.pdf}
+\caption{追加Gaussian実験の浅い設計における公開記録の例. $\rho=0.55$, 親16000天体・反復0から, Aは先頭350件, BとCは各先頭80件を表示した. Aの点は検出記録区間の中心を表示位置にだけ用い, BとCの矢印は非検出成分の上限を示す. 矢印の長さは図示用であり測定誤差ではない. 非検出成分の潜在真値とD天体は描いていない.}
+\label{fig:vis_catalogue}
+\end{figure}
+
+初期測度は, 宣言した標準化座標における独立な標準logistic分布とした. 中心と尺度は実験座標を定めるために固定したものであり, 推定時にGaussian形状や真の相関を与えない. 初期分布への依存は後で別に検査する. 本法と比較する対照は, 同じA, B, Cの整合確率を使うが分母の選択確率とD補完を省いた更新, およびBとCを削除した単純なAヒストグラムである. 前者は切断補正の有無, 後者は非検出情報を削除する影響を分離するための対照である. Lynden--Bell法や正しいA限定切断最尤推定量との性能比較ではない.
+
+\subsubsection{表示する正規化光度関数と回復可能な領域}
+\label{subsubsec:vis_target}
+
+最深層で少なくとも一方を検出できる領域を$U$とし, 光度側の親分布を$P_X$と書く. 主図では$Q_U=P_X(\,\cdot\mid U)$を用い, 各表示ビン$B_{hk}$の平均密度を
+\begin{align}
+\phi_{U,hk}&=\frac{Q_U(B_{hk})}{\Delta x_{1,h}\Delta x_{2,k}},\qquad
+\widehat\phi_{U,hk}=\frac{\widehat Q_U(B_{hk})}{\Delta x_{1,h}\Delta x_{2,k}}
+\label{eq:vis_bin_luminosity_function}
+\end{align}
+で定義する. 単位は$\mathrm{dex}^{-2}$であり, 一つのビン内部の連続密度を追加で推定した値ではない. 最深層でもどちらかの光度が非検出のままである帯状領域では, 微細な二変量密度は記録から定まらない. 主図はその領域をハッチとマスクで示し, 初期配分や平滑化によって埋めない. 両光度を区間として判定できる領域$R$の各ビンは, 最深層のA記録に一対一に対応し, $Q_U$のそのビン確率を観測法則が定める.
+
+深い設計で$R$が含む真の母確率は$\rho=0.55$で約0.88685, $\rho=0.90$で約0.91033である. $Q_U$での対応割合は約0.90537と0.95218となり, 主要な分布本体を表示できる. 一方, $\theta=P_X(U^c)$は依然として別の量であり, 表示した$Q_U$をそのまま全親分布$P_X$と呼ばない. 絶対数密度$\overline n_{\mathrm{gal}}$を外部から与える場合にも, $U$内の光度関数には$\overline n_{\mathrm{gal}}(1-\theta)\phi_U$という規格化が必要となる.
+
+Figures~\ref{fig:vis_reconstruction055}と\ref{fig:vis_reconstruction090}では, 同じ画素・表示範囲・色尺度で真値, 単純Aヒストグラム, D補完推定と残差を比較する. Gaussian真値は母密度の条件付き一次元積分で各ビンへ積分し, 選択後の潜在天体の経験分布を真値として使用しない. 真値積分は非有界領域も含め, 精度設定を厳しくした再計算と解析的なGaussian周辺確率で数値照合した. 推定されたビン確率のGaussian平滑化, KDE, CDF修復は行っていない.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_deep_truth_Q.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_deep_naive_A.pdf}
+\end{minipage}
+
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_deep_reconstructed_Q.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_deep_residual_resolved.pdf}
+\end{minipage}
+\caption{中程度相関$\rho=0.55$の深い設計における正規化二変量光度分布. 左上は真の$Q_U$のビン平均密度, 右上は選択補正なしのAヒストグラム, 左下はD補完から得た$\widehat Q_U$, 右下は判定可能なビン内での$\widehat\phi_U-\phi_U$である. 親16000天体・反復0を使用した. 主密度図は同じ対数色尺度, 残差は全相関・設計に共通の線型尺度を用いる. ハッチ内では二つの光度を同時に判定できず, 密度を外挿していない. 判定可能領域の白い無ハッチのビンは推定質量0に対応する. 表示外・非有界・非検出領域の質量をモデルから除いたり, 表示範囲だけで再規格化したりはしていない.}
+\label{fig:vis_reconstruction055}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_truth_Q.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_naive_A.pdf}
+\end{minipage}
+
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_reconstructed_Q.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_residual_resolved.pdf}
+\end{minipage}
+\caption{強相関$\rho=0.90$の場合の比較. 設計, 標本の選択規則, 表示量と色尺度はFigure~\ref{fig:vis_reconstruction055}と同じである. 相関を推定モデルに与えず, 全てのビン質量を更新する. 相関した分布の主軸方向と幅が回復する一方, 高光度端の疎なビンには有限標本のゆらぎが残る.}
+\label{fig:vis_reconstruction090}
+\end{figure}
+
+\subsubsection{独立反復による性能評価}
+\label{subsubsec:vis_performance}
+
+同じ表示を異なる標本数へ適用する際には, 一つの模擬標本の見かけだけで評価しない. 評価用の標準化閾値を各座標の$[-1/2,5/2]$に間隔$1/4$で固定し, $13\times13=169$点を使用する. この範囲は両設計の判定可能領域に含まれる. 両高光度側の積分確率とRMSEを
+\begin{align}
+T_U(\bm x)&=Q_U(X_1\ge x_1,X_2\ge x_2),\notag\\
+E_U&=\left\{\frac1{169}\sum_{\bm x\in\mathcal G}
+[\widehat T_U(\bm x)-T_{U,0}(\bm x)]^2\right\}^{1/2}
+\label{eq:vis_bright_probability_error}
+\end{align}
+と定める. 評価格子は観測値のパーセンタイルから選んだものではない. $Q_U$の条件付け領域は設計ごとに異なるため, 深度の比較では各設計と同じ$U$で真値も条件付ける. さらに, 判定可能ビンの確率に対する$\sum_{h\in R}|\widehat Q_{U,h}-Q_{U,0,h}|$, 全観測法則へのTV誤差, および初期条件を保持した全親分布の参考積分確率誤差を別々に保存した.
+
+Table~\ref{tab:vis_performance}は20反復の$E_U$の平均である. 両バンド検出だけのヒストグラムとD補完を省いた対照では, 標本数を増やしても誤差が残る. D補完では両相関・両設計で平均誤差が標本数とともに減少し, 親16000天体では約$0.0024$--$0.0030$となった. 深い設計の判定可能ビンの平均L1誤差は, $\rho=0.55$で0.47269から0.12151へ, $\rho=0.90$で0.35967から0.09650へ減少した. 深い設計では評価可能なビン集合も広がるため, このL1誤差を異なる深度間で同一の領域の誤差と解釈しない.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{追加Gaussian実験における積分確率誤差$E_U$の20反復平均. 単純Aは未補正ヒストグラム, Dなしは打切り記録を保って切断補正を省いた対照である. 各設計に対応する真の$Q_U$と比較し, 母集団の絶対数密度は使用しない.}
+\label{tab:vis_performance}
+\begin{tabular}{rcrrrr}
+\toprule
+$\rho$ & 設計 & 親標本数 & 単純A & Dなし & D補完 \\
+\midrule
+$0.55$ & 浅い & 1000 & 0.148632 & 0.021354 & 0.009294 \\
+$0.55$ & 浅い & 4000 & 0.147130 & 0.022026 & 0.004582 \\
+$0.55$ & 浅い & 16000 & 0.146444 & 0.021518 & 0.002506 \\
+$0.55$ & 深い & 1000 & 0.098702 & 0.034991 & 0.008608 \\
+$0.55$ & 深い & 4000 & 0.100348 & 0.036498 & 0.004194 \\
+$0.55$ & 深い & 16000 & 0.099761 & 0.036232 & 0.002443 \\
+$0.90$ & 浅い & 1000 & 0.130245 & 0.018957 & 0.011130 \\
+$0.90$ & 浅い & 4000 & 0.130997 & 0.016970 & 0.005788 \\
+$0.90$ & 浅い & 16000 & 0.128524 & 0.015117 & 0.003000 \\
+$0.90$ & 深い & 1000 & 0.112437 & 0.044123 & 0.009420 \\
+$0.90$ & 深い & 4000 & 0.112616 & 0.044432 & 0.005415 \\
+$0.90$ & 深い & 16000 & 0.109754 & 0.042486 & 0.002487 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_shallow_bright_probability_RMSE_Q.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_shallow_bright_probability_RMSE_Q.pdf}
+\end{minipage}
+\caption{浅い設計における$E_U$と親標本数の関係. 左は$\rho=0.55$, 右は$\rho=0.90$である. 線は各設定20反復の平均, 帯は反復結果の経験10--90パーセンタイルを表す. 帯は95\%信頼区間ではない. 横軸の親標本数は模擬実験の設計量であり, 推定の入力には収録された記録だけを渡している.}
+\label{fig:vis_sample_size}
+\end{figure}
+
+周辺分布の形状についても, 両標準化光度が$-1/2$以上となる共通の矩形領域に条件付けて比較した. Figure~\ref{fig:vis_marginals}の副バンドの分布は, 二変量推定質量から他座標について足し合わせて求めたものである. 非検出帯に初期配分を置いて全親周辺分布を復元した図ではない. この条件付き比較でも, 単純Aヒストグラムが高光度側へ偏るのに対してD補完が真の形状へ近づくことが確認できる.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.55_deep_marginal2.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_marginal2.pdf}
+\end{minipage}
+\caption{深い設計の二変量質量から求めた副バンドの条件付き周辺光度分布. 条件は両成分の標準化光度が$-1/2$以上である. 親16000天体・反復0を使い, 真値も同じ領域へ積分・規格化して比較した. 全親分布の周辺光度関数や空間数密度の推定ではない.}
+\label{fig:vis_marginals}
+\end{figure}
+
+\subsubsection{回復した分布と不可視規格化を分ける}
+\label{subsubsec:vis_invisible_normalization}
+
+本実験の未制約更新は完全不可視質量を初期値のまま保存する. 標準logistic初期測度では浅い設計で$\theta^{(0)}\simeq0.14254$, 深い設計で$\theta^{(0)}\simeq0.03328$となる. 真の不可視質量は$\rho=0.55$で約0.17126と0.02046, $\rho=0.90$で約0.24533と0.04395であり, 一般には一致しない. この相違を真値から補正して図を良く見せる操作はしていない. 全親分布の参考誤差も保存し, 例えば$\rho=0.90$の浅い設計では親標本数1000から16000に対してその平均RMSEは約0.02607から0.02332となり, $E_U$と同じ速さでは減っていない.
+
+各代表標本の可視代表$\widehat Q_U$を固定し, 不可視領域上の$R_I$を用いて
+\begin{align}
+P_\theta&=(1-\theta)\widehat Q_U+\theta R_I,\qquad
+R_I(U^c)=1,\notag\\
+0&\le\theta\le1-\max_j\frac{1/2}{q_j(\widehat Q_U)}
+\label{eq:vis_equal_likelihood_family}
+\end{align}
+という同じ記録法則の族を構成した. 上界は, 比較のために全層で維持した尾部条件$P(D_j)\le1/2$から得られる. Figure~\ref{fig:vis_same_likelihood}では下端・中点・上端の三つを示す. $\rho=0.90$では$\theta$の上端は浅い設計で約0.45191, 深い設計で約0.30557となった. 同じ尤度で親の積分光度確率が変化するので, Figure~\ref{fig:vis_reconstruction090}の形状の回復から親規格化の一点回復を結論しない. この族は一つの推定記録法則に対応する例であり, 全識別集合や95\%信頼集合を表示したものでもない.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_shallow_same_likelihood.pdf}
+\end{minipage}\hfill
+\begin{minipage}{0.485\linewidth}
+\includegraphics[width=\linewidth]{rho0.90_deep_same_likelihood.pdf}
+\end{minipage}
+\caption{同じ観測記録法則を与える三つの親分布. $\rho=0.90$, 親16000天体・反復0について, $P_\theta(X_1\ge x_1,X_2\ge10.2)$を示す. 左は浅い設計, 右は深い設計である. 真の親確率を破線で併記した. 三候補は同じ尾部クラスに属し, 条件付き尤度も同じだが, 親の積分光度確率は一致しない. 曲線の広がりは信頼帯でも, 新しい大域最適性の証拠でもない.}
+\label{fig:vis_same_likelihood}
+\end{figure}
+
+初期測度の中心を両座標で標準偏差単位の$-1,0,1$だけ動かす12個の追加対照でも, 不可視質量はそれぞれの初期値を保った. これに対し, 判定可能な$Q_U$の各ビン確率の既定初期値からの最大差は約$1.14\times10^{-5}$以下であった. 初期分布を変えても全親分布が同じ値へ回復したという意味ではなく, 観測が強く制約する確率と, 条件付き観測で決まらない規格化への異なる影響を示す結果である.
+
+\subsubsection{計算と再現性の確認範囲}
+\label{subsubsec:vis_reproducibility}
+
+高解像度の反復には, 元のD補完式の和を記録番号の配列で計算する実装を用いた. 数式と観測写像を変更せず, ゼロ成分を含む境界の直接計算, 旧有理数実装との更新の一致, および全列の密行列計算との比較を実施した. 新しい240個のD補完候補は平均正スコア$10^{-7}$以下で停止し, 更新数は33--151であった. 全候補が宣言した尾部上界$1/2$を数値診断上満たした. この実装は制約を自動的に強制する更新ではなく, 新しい候補に大域近最適性の証明を付与したものでもない. 先の13候補の大域保証とは検証対象を区別する.
+
+保存した公開記録を潜在配列から240件再構成し, 学習・検証・全データの720個数表を照合した. 非検出の潜在値をさらに暗い側へ移しても公開記録が変わらないことを確認し, 推定器への隠れた真値の入力を検査した. 全240初期更新における索引配列計算と密行列計算の最大差は約$8.68\times10^{-18}$, 完全不可視質量の反復中の最大変化は約$2.78\times10^{-17}$だった. 真の記録法則に対する分割尤度の所属も, 層別加算一予測で数値評価し, 全240設計で真値を採択したが, これは被覆確率1という推定でも, 有理数区間による被覆証明の再実行でもない.
+
+全標本生成と480EM適合を別出力先で再実行し, 公開入力JSONと全保存数値配列の一致を確認した. 評価表も実行時間以外が一致した. 再実行は独立な反復標本へ追加しない. 新しい実験設定, 真値評価専用配列, 推定に用いる公開個数, 質量と履歴, 図の元数値を区別して保存し, 全図を同じコードから再生成できるようにした. 以上の追加実験は, 観測可能な二変量光度分布の回復を視覚的に示しつつ, 不可視領域と規格化の不定性を残したまま評価するものである.
+\FloatBarrier

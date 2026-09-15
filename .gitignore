@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+outputs/rerun/
+outputs/smoke/
+build/
+dist/
+outputs/my_fit.json
+.DS_Store
+.env
+.env.*

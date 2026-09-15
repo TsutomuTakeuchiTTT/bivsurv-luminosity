@@ -1,0 +1,72 @@
+{
+  "prepared_date": "2026-09-15",
+  "repository_name": "bivsurv-luminosity",
+  "version": "0.1.0rc1",
+  "license": "BSD-3-Clause",
+  "preparation_scope": "License, packaging metadata, README/citation, release documentation, integrity checker and future CI only.",
+  "original_manifest_verified_before_edits": {
+    "files": 3841,
+    "failures": 0
+  },
+  "unchanged_protected_files": 3826,
+  "protected_file_changes": [],
+  "original_python_sources_unchanged": 65,
+  "original_figures_unchanged": 82,
+  "original_output_files_unchanged": 943,
+  "current_tests": {
+    "unit_tests": 11,
+    "failures_or_errors": 0
+  },
+  "current_smoke_check": {
+    "passed": true,
+    "catalogues": 4,
+    "public_tables": 12,
+    "fit_invariants": 4,
+    "metric_comparisons": 28,
+    "dense_step_comparisons": 4,
+    "max_score": 9.807777889507605e-08,
+    "max_dense_indexed_update_difference": 5.204170427930421e-18,
+    "quadrature_tightening_max_difference": 2.4483884387079577e-19,
+    "true_marginal_max_difference": 9.020562075079397e-17,
+    "fresh_rerun_comparison": {},
+    "global_certificate_for_new_fits": false
+  },
+  "current_public_counts_refit": {
+    "case": "deep/rho0.55_N16000_r000",
+    "mass_array_exact_match": true,
+    "max_absolute_difference": 0.0
+  },
+  "build": {
+    "wheel_build_and_separate_target_install": true,
+    "installed_license_expression": "BSD-3-Clause",
+    "installed_license_file": "LICENSE",
+    "no_dependency_install_attempted": true
+  },
+  "metadata": {
+    "CFF_YAML_and_core_fields_checked": true,
+    "CFF_complete_official_JSON_schema_validation": false,
+    "YAML_workflow_parsed": true,
+    "version_agreement": true,
+    "fabricated_remote_metadata": false
+  },
+  "limited_package_hygiene_scan": {
+    "selected_common_token_patterns_found": 0,
+    "font_files_in_release": 0,
+    "external_package_binaries_in_release": 0,
+    "exhaustive_security_or_legal_audit": false
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "not_run_this_preparation": [
+    "full 480-fit experiment",
+    "full figure regeneration",
+    "reference Stage 22–25 optimizations or proof verifiers",
+    "GitHub-hosted CI",
+    "remote repository creation or push",
+    "GitHub Release publication",
+    "DOI registration"
+  ],
+  "remote_operations_performed": false
+}

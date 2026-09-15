@@ -1,0 +1,137 @@
+{
+  "edition": "English documentation for unpublished 0.1.0rc1",
+  "base_archive": "bivsurv-luminosity-0.1.0rc1-github-ready.zip",
+  "base_archive_sha256": "70ccb64f88c7c198b0ef6a4d635343048e1d6d252245c6502d3a0fe64c973bc6",
+  "translations": [
+    {
+      "source": "docs/RESULTS_ja.md",
+      "source_sha256": "06dfecdc1e82c313331bcd1de27527a4206886a2c6b91fc949928538dbbd7f91",
+      "english": "docs/RESULTS.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "The final section distinguishes the original pre-approval status from the later licensed preparation; it does not rewrite the historical results."
+    },
+    {
+      "source": "docs/RELEASE_CHECKLIST_ja.md",
+      "source_sha256": "6a773ccd929ebbebbe2e782e3103efb082daf2efc93476a51d1502af0f6762e9",
+      "english": "docs/RELEASE_CHECKLIST.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "Execution commands are translated from the supplied checklist; no remote commands have been executed as part of this revision."
+    },
+    {
+      "source": "reference_experiments/stage22/README_ja.md",
+      "source_sha256": "3c5f6af3d148e4733b88e3be6e1c3ba1ebf5140d41352936a493a05bbe5aa429",
+      "english": "docs/reference/stage22/README.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "Paths and commands are relative to the archived Stage 22 directory, not to this documentation directory. The disposable-copy instruction is a packaging safeguard added here."
+    },
+    {
+      "source": "reference_experiments/stage22/RESUMPTION_ja.md",
+      "source_sha256": "e5376c6ea5ff5b0b89c615a44050634034a3fa27d0b697722d42431f7ad82e36",
+      "english": "docs/reference/stage22/RESUMPTION.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage22/SUMMARY_ja.md",
+      "source_sha256": "686fa9fc76109cd721c3b0f164e356019051a253812994fa2dfb305223ab9538",
+      "english": "docs/reference/stage22/SUMMARY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage22/THEORY_ja.md",
+      "source_sha256": "74b04f20301141951f5a6c61b863a7fd7d7b687e6788d5c7b8433cfccac28c0e",
+      "english": "docs/reference/stage22/THEORY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage23/README_ja.md",
+      "source_sha256": "4818b071929c8cec7b4a074e302eb5f74ddf1c7eaf3242dd71f25caf4adc5f40",
+      "english": "docs/reference/stage23/README.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "Paths and commands refer to the Stage 23 snapshot. The disposable-copy instruction is an added packaging safeguard, not a change to the original experiment."
+    },
+    {
+      "source": "reference_experiments/stage23/SUMMARY_ja.md",
+      "source_sha256": "4c60f687f2136894d839af4c40dcb228f9bb084a08bcbd7ae2117ee1ff64b5a1",
+      "english": "docs/reference/stage23/SUMMARY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage23/THEORY_ja.md",
+      "source_sha256": "023f6903c0f89b464df7155abc66b8141161e61fb1adf1b308830e5e130d0414",
+      "english": "docs/reference/stage23/THEORY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage24/README_ja.md",
+      "source_sha256": "340b4ccf501e15a9d60c8e27ca20be475266e961109d51fd7bf50d01c3b3c816",
+      "english": "docs/reference/stage24/README.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage24/SUMMARY_ja.md",
+      "source_sha256": "65b48b4affca9216557097f77082968a82c99e4812e159e9804601fee62dd8c2",
+      "english": "docs/reference/stage24/SUMMARY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "For the later global near-optimality certificates of these same 13 candidates, see the separate Stage 25 documentation; this Stage 24 account retains its original scope."
+    },
+    {
+      "source": "reference_experiments/stage24/THEORY_ja.md",
+      "source_sha256": "e496e0bf58cbf9cf2deff09fd1e1a619e7c64676f255ea93f89551bef3ab9100",
+      "english": "docs/reference/stage24/THEORY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage25/README_ja.md",
+      "source_sha256": "aabe4cc1d47a010174a4818a4245f441f41878f7abdd1c2618058ae67be181b5",
+      "english": "docs/reference/stage25/README.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": "The disposable-copy instruction is an added packaging safeguard. Refer to the root reproducibility guide for a read-only check of saved certificates."
+    },
+    {
+      "source": "reference_experiments/stage25/SUMMARY_ja.md",
+      "source_sha256": "c1335b60fe5fd2dce43391e534fa340e5770c74db5f6a4109a3941c888a9affd",
+      "english": "docs/reference/stage25/SUMMARY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "reference_experiments/stage25/THEORY_ja.md",
+      "source_sha256": "86c60c56e14ca35b166cb70a119bad904455b65ea67926df7fd5860b98af06c3",
+      "english": "docs/reference/stage25/THEORY.md",
+      "coverage": "complete Markdown translation; original headings, claims, numerical values, and scope retained",
+      "editorial_note": ""
+    },
+    {
+      "source": "README_ja.md",
+      "source_sha256": "e49edbf8a022bf7588e9c24481ef522f67d365afe9d69849ffa65911057bd41b",
+      "english": "README.md",
+      "coverage": "existing comprehensive English counterpart; English navigation updated",
+      "editorial_note": "Root Japanese README retained unchanged; the English README also contains original additional English detail."
+    }
+  ],
+  "preserved_japanese_latex": [
+    "manuscript/visual_benchmark_ja.tex",
+    "reference_experiments/stage22/stage21_record.tex",
+    "reference_experiments/stage22/stage21_record_reissued.tex",
+    "reference_experiments/stage23/stage22_record.tex",
+    "reference_experiments/stage24/stage23_record.tex",
+    "reference_experiments/stage25/stage24_record.tex"
+  ],
+  "source_code_translation_required": false,
+  "paper_translation_included": false,
+  "extra_english_guides": [
+    "docs/README.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/FIGURES.md",
+    "docs/reference/README.md",
+    "docs/DOCUMENTATION_POLICY.md",
+    "manuscript/README.md"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "sampling_audit_repeated": true,
+  "aggregate_equal_excluding_seconds": true,
+  "exact_json_file_matches": 240,
+  "csv_byte_matches": 2,
+  "latent_array_matches": 600,
+  "compressed_npz_byte_identity_not_claimed": true,
+  "projection_searches_repeated": false,
+  "projection_certificates_independently_reverified": 3
+}

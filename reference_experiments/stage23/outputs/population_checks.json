@@ -1,0 +1,10 @@
+{
+  "all_models_include_full_real_plane": true,
+  "analytic_aligned_ranges": 27,
+  "analytic_endpoint_witnesses": 54,
+  "maximum_endpoint_gap": "1/2703999999937808",
+  "population_ranges": 54,
+  "rational_lp_witnesses": 108,
+  "sample_zeros_used_as_population_zeros": false,
+  "scipy_version": "1.17.0"
+}

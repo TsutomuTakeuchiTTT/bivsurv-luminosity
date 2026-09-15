@@ -1,0 +1,315 @@
+% 第21段階の追加記録. 第20段階の本文に続けて追加する.
+% 既存の \bm, proposition, proof, booktabs, hyperrefを使用する.
+% 新しい引用キー, 文献環境, 文書終了命令は追加しない.
+% 根拠資料: bivariate_survival_reconstruction_stage21.zip.
+% 数値表は第21段階の保存値. 次の標本実験とは区別する.
+
+\section{第21段階の目的と再解析の範囲}
+\label{sec:stage21_scope}
+
+第20段階で通常予算内に端点精度へ到達しなかった三設定を,
+同じ入力と同じ親信頼集合のまま再解析する.
+対象は100質量の交差二限界, 9質量の三限界,
+および36質量の五限界モデルである.
+観測限界, 記録区間, 学習・検証個数, 観測クラス上の初期分布,
+学習2EM予測, 有意水準$1/20$, 全尾部上界$1/2$と対象量を変更しない.
+全実数空間セルを再構成し, 入力指紋を旧証拠と照合する.
+新しい母集団標本, 記録個数標本, 点推定EMの再適合,
+統計的被覆率の列挙を行う段階ではない.
+
+共通親質量を$\bm m$, 正個数記録を$i$, その限界層を$j(i)$,
+記録個数を$n_i$, 層個数を$n_j$, 総個数を$N$とする.
+\begin{align}
+a_i(\bm m)&=\bm A_i\bm m,\qquad
+q_j(\bm m)=\bm V_j\bm m,
+\label{eq:stage21_probabilities}\\
+L(\bm m)&=\prod_i
+\left\{\frac{a_i(\bm m)}{q_{j(i)}(\bm m)}\right\}^{n_i},
+\label{eq:stage21_likelihood}\\
+\mathcal C_\tau
+&=\{\bm m\ge0:\bm1^{\mathsf T}\bm m=1,
+\ q_j(\bm m)\ge1-\epsilon_j\ \text{for all }j,
+\ L(\bm m)\ge\tau\}.
+\label{eq:stage21_confidence_set}
+\end{align}
+$\tau$は学習側だけの予測と検証個数から作る既存の閾値である.
+対象$s(\bm m)=\bm c^{\mathsf T}\bm m$は厳密不等号による親生存確率であり,
+可視側で規格化した生存確率へ置き換えない.
+完全不可視列と元の尾部制約も保持する.
+
+\section{内側候補と複数接線による外側集合}
+\label{sec:stage21_multiple_planes}
+
+内側候補には元の非負性, 総和1, 全尾部条件,
+正個数分子の正値性と, 有理数積による$L\ge\tau$を要求する.
+数値的な候補改善は, 同じ集合で以前に見つけられなかった親分布を得る操作である.
+ソルバーの停止表示や緩和問題への所属だけでは採用しない.
+
+外側では, 複数の参照点から得た有効な接線半空間を,
+同じ$\bm m$へ同時に課す.
+単独の接線ごとに得た上界の最良値を選ぶことと,
+複数半空間の交差を線型緩和とすることは異なる.
+真の信頼集合を含む半空間の交差は引き続き有効であり,
+単独半空間より小さい外側集合になる.
+有理数への丸め後の改善は, 実際の証拠値で別に確認する.
+
+第20段階の検証済みの全体的な対象下界・上界も,
+線型必要条件として再利用する.
+祖先証拠への依存関係を保存し, 独立検証時にそれらを先に確認する.
+旧分割木の枝を新しい座標へそのまま移さず,
+新しい根箱から全領域の被覆を作り直す.
+
+\section{可視和集合による正確な尺度変換}
+\label{sec:stage21_relative_scale}
+
+全収録集合の和集合を$U=\bigcup_jD_j^c$とし,
+そのセル指示行を$\bm\eta^{\mathsf T}$とする.
+\begin{align}
+r(\bm m)&=\bm\eta^{\mathsf T}\bm m=P(U),\qquad
+0<q_j(\bm m)\le r(\bm m)\le1,
+\label{eq:stage21_visibility_scale}\\
+a_i'&=a_i/r,\qquad y_j=q_j/r,
+\label{eq:stage21_relative_coordinates}\\
+\frac{a_i'}{y_{j(i)}}&=\frac{a_i}{q_{j(i)}},\qquad
+1-\epsilon_j\le y_j\le1.
+\label{eq:stage21_ratio_invariance}
+\end{align}
+全観測分子と全収録集合が$U$に含まれるため, 比率は厳密に保存される.
+$r>0$は元の正の収録確率下限から従う.
+
+変換するのは観測式であって, 最適化変数は元の親質量のままである.
+全成分を含む$\bm m/r$の総和は$1/r$であり,
+完全不可視成分も含めた確率ベクトルと解釈しない.
+その可視成分だけが$P(\cdot\mid U)$の質量に対応する.
+元の単体条件, 尾部条件と対象$\bm c^{\mathsf T}\bm m$を別に保持する.
+
+$\bm V_j=\bm\eta^{\mathsf T}$となる最も広い収録行があれば$y_j=1$である.
+三限界と五限界の例では$(2,2)$の行がこの条件を満たし,
+非固定の箱座標を3から2, 5から4へ減らせた.
+100質量の二限界例では原尺度の$q_j$を使った.
+再尺度化が全ての入力で強い緩和を与えるとは主張しない.
+原尺度は$\bm\eta=\bm1$, $r=1$として同じ記法に含められる.
+
+相対収録確率の箱$B=\prod_j[l_j,u_j]$は,
+\begin{align}
+l_j\bm\eta^{\mathsf T}\bm m
+&\le\bm V_j\bm m\le u_j\bm\eta^{\mathsf T}\bm m
+\label{eq:stage21_relative_box}
+\end{align}
+という線型制約で表す.
+この条件で元の$\bm V_j\bm m\ge1-\epsilon_j$を置き換えてはいけない.
+
+\section{Perspectiveによる凹な外側緩和}
+\label{sec:stage21_perspective}
+
+$\omega_i=n_i/N$, $\lambda_j=n_j/N$とする.
+$-\log y$の$[l_j,u_j]$上の割線を
+$s_j(y)=\alpha_j+\beta_jy$と書き, 固定区間では定数とする.
+\begin{align}
+f_B(\bm m/r)
+&=\sum_i\omega_i\log(a_i/r)
++\sum_j\lambda_js_j(q_j/r),
+\label{eq:stage21_relative_majorant}\\
+\Phi_B(\bm m)
+&=r\left\{f_B(\bm m/r)-\frac{\log\tau}{N}\right\}
+\notag\\
+&=\sum_i\omega_ir\log(a_i/r)
++\sum_j\lambda_j(\alpha_jr+\beta_jq_j)
+-r\frac{\log\tau}{N}.
+\label{eq:stage21_perspective_majorant}
+\end{align}
+$r\log(a/r)$は対数のPerspectiveであり, $(a,r)$について凹である.
+$a_i,r,q_j$は親質量の線型関数なので$\Phi_B$も凹となる.
+従って$\Phi_B\ge0$と箱・単体・尾部条件の交差は凸な外側集合である.
+元の条件付き尤度が一般に凹になるという主張ではない.
+
+割線誤差から,
+\begin{align}
+0&\le\Phi_B(\bm m)-\frac{r}{N}\{\ell(\bm m)-\log\tau\}
+\notag\\
+&\le r\sum_j\lambda_j\frac{(u_j-l_j)^2}{8l_j^2}
+\label{eq:stage21_secant_error}
+\end{align}
+を得る. 固定区間の誤差項は0である.
+この緩和誤差の消失だけから,
+任意の入力で端点精度へ有限時間に到達するとは結論しない.
+
+\section{元の親質量に対する全列双対証拠}
+\label{sec:stage21_certificates}
+
+参照質量$\bm\nu$から$p_i^\nu=(\bm A_i\bm\nu)/(\bm\eta^{\mathsf T}\bm\nu)>0$を作る.
+\begin{align}
+\log(a_i/r)&\le\log p_i^\nu+\frac{a_i/r}{p_i^\nu}-1
+\label{eq:stage21_log_tangent}
+\end{align}
+と分母割線を合わせ, 箱内で
+\begin{align}
+\frac{\ell(\bm m)}N
+&\le\gamma_{\bm\nu}+\bm t_{\bm\nu}^{\mathsf T}(\bm m/r)
+\label{eq:stage21_affine_scaled}
+\end{align}
+となる上界を作る.
+対数には有理数の上界を使い, $t_-\le\log\tau/N$も有理数で評価する.
+信頼候補では$r>0$を掛けて,
+\begin{align}
+\{(t_--\gamma_{\bm\nu})\bm\eta-\bm t_{\bm\nu}\}^{\mathsf T}\bm m
+&\le0
+\label{eq:stage21_homogeneous_cut}
+\end{align}
+を得る. 複数の参照点のこの条件を同時に加える.
+
+全必要条件を$G\bm m\le\bm b$と並べ,
+符号$\sigma\in\{-1,1\}$について非負有理数$\bm y$を提案する.
+\begin{align}
+z&=\max_h\{\sigma c_h-(G^{\mathsf T}\bm y)_h\},
+\label{eq:stage21_dual_completion}\\
+G^{\mathsf T}\bm y+z\bm1&\ge\sigma\bm c,\qquad
+\sigma\bm c^{\mathsf T}\bm m\le\bm b^{\mathsf T}\bm y+z
+\label{eq:stage21_column_bound}
+\end{align}
+が全列で厳密に成立する.
+目的ベクトル0に対して負の上界が得られれば空性を証明できる.
+数値LPの状態だけで箱を棄却せず, 全頂点列挙も用いない.
+
+接線の参照点と, 内側端点を実現する親分布は別である.
+前者には正の観測分子が必要だが, 信頼閾値の達成は要求しない.
+LP点の分子がゼロなら, 正の初期点との明示的な混合を新しい参照点に使える.
+後者には必ず元の親制約と尤度閾値を要求する.
+提案内部の$10^{-13}$という分子条件や有理数化を,
+最終的な親クラスへ追加することはしない.
+
+閾値の対数は巨大な積だけから評価せず,
+\begin{align}
+\log\tau&=\log\alpha_{\mathrm{sig}}+\sum_i n_i\log g_i
+\label{eq:stage21_factorized_threshold}
+\end{align}
+の有理数区間を足し合わせる.
+元の有理数積$\tau$との一致も確認し, 予測や有意水準を変更しない.
+
+\section{三設定の再解析結果}
+\label{sec:stage21_results}
+
+全三設定で各端点の囲い幅$10^{-3}$以下を達成した.
+Table~\ref{tab:stage21_endpoints}の小数は外向き8桁表示である.
+\begin{table}[htbp]
+\centering
+\caption{第21段階の生存射影端点の保証区間.
+$H$は質量数, $J$は限界数である.}
+\label{tab:stage21_endpoints}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrll}
+\toprule
+方式 & $H/J$ & ノード & 下端の囲い & 上端の囲い \\
+\midrule
+原尺度 & $100/2$ & 1 & $[0,0]$ & $[0.58713709,0.58713712]$ \\
+相対尺度 & $9/3$ & 11 & $[0.12211514,0.12281044]$ & $[0.69732450,0.69743379]$ \\
+相対尺度 & $36/5$ & 63 & $[0.18026669,0.18122339]$ & $[0.56477319,0.56577172]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+有理数で求めた最大囲い幅は, 100質量・二限界で約$1.573763751\times10^{-8}$,
+9質量・三限界で約$6.952926227\times10^{-4}$,
+36質量・五限界で約$9.985235367\times10^{-4}$である.
+ノード上限は51,401,1001,
+数値提案の反復上限は400,180,220とした.
+これらは計算設定であり統計モデルの条件ではない.
+
+旧外側上界を固定して新しい内側証拠だけを採用した比較も行った.
+\begin{table}[htbp]
+\centering
+\caption{上端位置の不確実性の分解.
+各列は生存範囲自体の幅ではなく, 上端の囲い幅である.}
+\label{tab:stage21_inner_outer}
+\begin{tabular}{rrrr}
+\toprule
+$H/J$ & 旧囲い幅 & 内側だけ更新 & 両側を更新 \\
+\midrule
+$100/2$ & 0.4640139152 & 0.4128629033 & $1.573763751\times10^{-8}$ \\
+$9/3$ & 0.2841013531 & 0.1450257247 & 0.00010927394 \\
+$36/5$ & 0.1761219108 & 0.02039005848 & 0.00099852354 \\
+\bottomrule
+\end{tabular}
+\end{table}
+これは証拠同士の算術的な比較であり,
+個々の改良の因果的寄与を測ったアブレーションや同条件の速度比較ではない.
+五限界例では内側候補の改善が大きく,
+100質量例では外側上界を1から下げた証拠が重要だった.
+
+各上端の実現親分布には完全不可視質量が,
+順に約0.4810583013, 0.4287332394, 0.4110543411残る.
+尺度変換によってその質量を0へ制限したのではない.
+
+下端を$[L_{\mathrm{out}},L_{\mathrm{in}}]$,
+上端を$[U_{\mathrm{in}},U_{\mathrm{out}}]$で囲むと,
+信頼集合自体の生存射影幅$W$は
+\begin{align}
+U_{\mathrm{in}}-L_{\mathrm{in}}&\le W
+\le U_{\mathrm{out}}-L_{\mathrm{out}}
+\label{eq:stage21_width_bracket}
+\end{align}
+を満たす. 保存された幅の囲いをTable~\ref{tab:stage21_set_width}に示す.
+\begin{table}[htbp]
+\centering
+\caption{同じ親信頼集合が許す生存射影幅の囲い. 数値は近似表示.}
+\label{tab:stage21_set_width}
+\begin{tabular}{rl}
+\toprule
+$H/J$ & 射影幅の囲い \\
+\midrule
+$100/2$ & $[0.58713709668,0.58713711242]$ \\
+$9/3$ & $[0.57451406905,0.57531863560]$ \\
+$36/5$ & $[0.38354980290,0.38550502148]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+この広さを端点計算の未収束だけに帰すことはできない.
+一方, 有限標本の信頼射影には標本不確実性, 校正法の保守性,
+記録内配分と尾部クラスの自由度が含まれ得る.
+母集団の識別幅だけを測ったと解釈しない.
+
+\section{独立検証と次の統計的検査}
+\label{sec:stage21_record}
+
+独立検証器は, 探索側の接線・制約・双対構成を呼ばず,
+各単体基底で同次化された接線値を直接計算する.
+祖先証拠も先に確認したうえで,
+三証拠の75ノード, 64葉証拠, 2108列不等式,
+81参照平面, 14棄却葉と6内側親分布を検査した.
+LP, 非線型最適化, 根探索と多面体頂点列挙は検証中に禁止する.
+学習2EMの定義と全空間セルの再構成は行う.
+
+第21段階の追加監査では, 30個の正有理数親候補を用い,
+2430比率尺度恒等式, 7290不可視混合比率,
+90混合生存恒等式と30接線上界を確認した.
+端点, 正規化行, 根箱, 閾値, 親質量, 双対係数と参照質量の
+7種類の有害な改ざんを拒否した.
+保存された再現性記録には, 三探索を別出力先へ再実行し,
+実行時間以外の全証拠フィールドが一致したことが記録されている.
+
+保存パッケージは次のZIPである.
+\begin{verbatim}
+bivariate_survival_reconstruction_stage21.zip
+\end{verbatim}
+\allowbreak\texttt{refine.py}\allowbreakに尺度変換と複数接線,
+\allowbreak\texttt{run\_stage21.py}\allowbreakに固定した実行条件,
+\allowbreak\texttt{verify\_stage21.py}\allowbreakに独立検証,
+\allowbreak\texttt{audit\_stage21.py}\allowbreakに追加監査を保存した.
+\begin{verbatim}
+python run_stage21.py --outdir new_outputs
+python verify_stage21.py --outdir new_outputs
+python audit_stage21.py --outdir new_outputs
+\end{verbatim}
+祖先証拠を省略する開発用オプションは, 独立した再確認には使わない.
+正確な端点と比較は\nolinkurl{outputs/comparison.csv}にある.
+
+中断前の保存記録には, 祖先証拠を含めた三証拠の独立再検証も記録されている.
+本節の数値表と検査件数は第21段階の保存結果であり,
+今回の記録再掲時に三探索と追加監査全体を新たに実行したものではない.
+
+到達点は, 同じ保存ベンチマークに残っていた通常三設定の
+端点精度未達成を解消したことである.
+一般の大規模限界配列に対する計算量問題を解決したとはしない.
+次段階では非入れ子の設計で連続母分布から実際の標本を生成し,
+親分布への誤差, 正規化された信頼集合の被覆,
+および不可視質量と記録内配分に残る自由度を同じ実験で区別して検査する.

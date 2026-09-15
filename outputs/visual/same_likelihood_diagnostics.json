@@ -1,0 +1,86 @@
+{
+  "rho0.55_deep": {
+    "log_likelihood_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_record_probability_difference": 6.938893903907228e-17,
+    "min_selection_probabilities": [
+      0.7351283686237238,
+      0.617564184311862,
+      0.5
+    ],
+    "reference_theta": 0.033279071736023486,
+    "theta_max": 0.31984668074219624,
+    "thetas": [
+      0.0,
+      0.15992334037109812,
+      0.31984668074219624
+    ],
+    "true_theta": 0.020462128659449963
+  },
+  "rho0.55_shallow": {
+    "log_likelihood_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_record_probability_difference": 4.163336342344337e-17,
+    "min_selection_probabilities": [
+      0.869926609107571,
+      0.6849633045537855,
+      0.5000000000000001
+    ],
+    "reference_theta": 0.1425369565965509,
+    "theta_max": 0.4252388709974816,
+    "thetas": [
+      0.0,
+      0.2126194354987408,
+      0.4252388709974816
+    ],
+    "true_theta": 0.1712581898853389
+  },
+  "rho0.90_deep": {
+    "log_likelihood_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_record_probability_difference": 8.326672684688674e-17,
+    "min_selection_probabilities": [
+      0.7200168225934059,
+      0.6100084112967029,
+      0.4999999999999999
+    ],
+    "reference_theta": 0.033279071736023486,
+    "theta_max": 0.3055717806716436,
+    "thetas": [
+      0.0,
+      0.1527858903358218,
+      0.3055717806716436
+    ],
+    "true_theta": 0.04394840071310855
+  },
+  "rho0.90_shallow": {
+    "log_likelihood_differences": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "max_record_probability_difference": 5.551115123125783e-17,
+    "min_selection_probabilities": [
+      0.9122595135592282,
+      0.7061297567796141,
+      0.49999999999999994
+    ],
+    "reference_theta": 0.14253695659655094,
+    "theta_max": 0.451910347255,
+    "thetas": [
+      0.0,
+      0.2259551736275,
+      0.451910347255
+    ],
+    "true_theta": 0.24532588993020876
+  }
+}

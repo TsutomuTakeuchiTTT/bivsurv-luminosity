@@ -1,0 +1,25 @@
+{
+  "note": "Existing stage20/stage21 and nested source modules reused without modification; stage22 drivers are new.",
+  "source_sha256": {
+    "project_stage22.py": "38f516a0210143f1ac661740d5af0faa5e3d8f8c62a9aad5114981de8deee5d5",
+    "refine_projections_stage22.py": "9f6d732514575faf490937f1c739b015a0aaed702aededf8242ce5a244adfc9a",
+    "audit_stage22.py": "e32cecd354ba1f3189870f8e831d23827e5c88f823304c5db8feea29c2820c5a",
+    "verify_stage22.py": "6421da1820a0ddf17fd542378e436a3a952c760d9c420d8c15a9d1a7e2b8188f",
+    "vendor20/verify_stage20.py": "bd7103bfa5a34abaa322a38353e52634c77008fc38d6d79179f12f732dd38160",
+    "vendor20/column_certificates.py": "3d11a871aec652abb359703d0ea1b3b307165cd619bf54bdf4077d1e476fd053",
+    "vendor21/refine.py": "5861b2ffe65883d5392b17e2d5a88391278e7ab0386a60923c958adcdee13c61",
+    "vendor21/verify_stage21.py": "8afae0983f3ca8db4bafb39978e64cf8c053e7834f230dbb6ca2296f1dcf263b",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/verify_stage20.py": "bd7103bfa5a34abaa322a38353e52634c77008fc38d6d79179f12f732dd38160",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/column_certificates.py": "3d11a871aec652abb359703d0ea1b3b307165cd619bf54bdf4077d1e476fd053",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/integrated.py": "8e54038f21588394ed1c44da3712cd04938c5fd9fb2b715566a7e8311a4f828e",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/exact.py": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/multilimit.py": "efaeebb3a4458e2f099a40043df55eddc1e2cb3a3721749c5827f39510ad8fbc",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/vendor14/coarsened_model.py": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699",
+    "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/vendor14/prior/split_inference.py": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20",
+    "vendor20/vendor19/integrated.py": "8e54038f21588394ed1c44da3712cd04938c5fd9fb2b715566a7e8311a4f828e",
+    "vendor20/vendor19/exact.py": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58",
+    "vendor20/vendor19/multilimit.py": "efaeebb3a4458e2f099a40043df55eddc1e2cb3a3721749c5827f39510ad8fbc",
+    "vendor20/vendor19/vendor14/coarsened_model.py": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699",
+    "vendor20/vendor19/vendor14/prior/split_inference.py": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "rule": "All Stage23 fits with evaluation.tail_feasible=false, no additional outcome selection",
+  "names": [
+    "coarse_d3__lambda0_N400_r004",
+    "coarse_d3__lambda0_N400_r010",
+    "coarse_d3__lambda1_N400_r006",
+    "coarse_d3__lambda2_N400_r000",
+    "coarse_d3__lambda2_N400_r016",
+    "coarse_d4__lambda0_N400_r004",
+    "coarse_d4__lambda0_N400_r010",
+    "coarse_d4__lambda1_N400_r006",
+    "coarse_d4__lambda2_N400_r000",
+    "coarse_d4__lambda2_N400_r006",
+    "coarse_d4__lambda2_N400_r009",
+    "coarse_d4__lambda2_N400_r010",
+    "coarse_d4__lambda2_N400_r016"
+  ],
+  "n": 13,
+  "prior_source": "bivariate_survival_reconstruction_stage23.zip",
+  "unique_parent_samples": 8
+}

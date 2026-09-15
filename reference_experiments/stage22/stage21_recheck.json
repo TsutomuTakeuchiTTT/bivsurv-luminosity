@@ -1,0 +1,54 @@
+{
+  "all_passed": true,
+  "cases": {
+    "crossing2_large": {
+      "certificates": 2,
+      "column_inequalities": 200,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 1,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "seconds": 36.990290016,
+      "supporting_planes": 1,
+      "vertex_enumeration_called": false
+    },
+    "crossing3_irregular": {
+      "certificates": 12,
+      "column_inequalities": 108,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 11,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "seconds": 0.5247070919999999,
+      "supporting_planes": 16,
+      "vertex_enumeration_called": false
+    },
+    "crossing5_consistent": {
+      "certificates": 50,
+      "column_inequalities": 1800,
+      "excluded_leaves": 14,
+      "model_rebuilt": true,
+      "nodes": 63,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "seconds": 6.776522397999997,
+      "supporting_planes": 64,
+      "vertex_enumeration_called": false
+    }
+  },
+  "solvers_disabled": true
+}

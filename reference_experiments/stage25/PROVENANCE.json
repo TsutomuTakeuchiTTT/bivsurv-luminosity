@@ -1,0 +1,15 @@
+{
+  "stage": 25,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "source_stage24_zip_sha256": "121e6b7202dcb03097b52f91a83c972df78d2aa0e06f51e689cba92464f2d126",
+  "original_point_candidates_modified": false,
+  "new_random_samples_generated": false,
+  "main_runs_repeated": true,
+  "shared_ancestral_functions": [
+    "finite observation geometry",
+    "rational log interval arithmetic"
+  ],
+  "early_exploration": "A preliminary stricter target 1e-8 with default LP settings stalled near 1.46e-7 for the first case; an interrupted subsequent exploratory run is not counted as a result. Main results and reproducible controls use the saved final source."
+}

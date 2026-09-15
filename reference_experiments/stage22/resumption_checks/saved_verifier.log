@@ -1,0 +1,92 @@
+{
+  "all_scoped_checks_passed": true,
+  "counts": {
+    "trials": 120,
+    "parents": 120000,
+    "training_predictions": 120,
+    "true_membership_checks": 120,
+    "raw_count_reconstructions": 120,
+    "EM_last_state_checks": 120
+  },
+  "covered_parent_sets": 120,
+  "inverse_conditional_cdf_max_abs_error": 3.3306690738754696e-16,
+  "invisible_initial_mass_max_abs_error": 6.245004513516506e-16,
+  "raw_min_ell_increment": -4.547473508864641e-13,
+  "truth_cell_integrals": {
+    "-3/4": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "169/256",
+        "169/256",
+        "51/64"
+      ]
+    },
+    "0": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "5/8",
+        "5/8",
+        "3/4"
+      ]
+    },
+    "3/4": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "151/256",
+        "151/256",
+        "45/64"
+      ]
+    }
+  },
+  "projection_certificates": {
+    "lambda0_N400_r000": {
+      "passed": true,
+      "nodes": 23,
+      "certificates": 24,
+      "column_inequalities": 264,
+      "supporting_planes": 35,
+      "excluded_leaves": 0,
+      "parent_witnesses": 2,
+      "precision_reached": true,
+      "model_rebuilt": true,
+      "original_input_unchanged": true,
+      "prior_certificate_rechecked": true,
+      "optimization_or_root_search_called": false,
+      "vertex_enumeration_called": false
+    },
+    "lambda1_N400_r000": {
+      "passed": true,
+      "nodes": 13,
+      "certificates": 14,
+      "column_inequalities": 154,
+      "supporting_planes": 25,
+      "excluded_leaves": 0,
+      "parent_witnesses": 2,
+      "precision_reached": true,
+      "model_rebuilt": true,
+      "original_input_unchanged": true,
+      "prior_certificate_rechecked": true,
+      "optimization_or_root_search_called": false,
+      "vertex_enumeration_called": false
+    },
+    "lambda2_N400_r000": {
+      "passed": true,
+      "nodes": 15,
+      "certificates": 16,
+      "column_inequalities": 176,
+      "supporting_planes": 22,
+      "excluded_leaves": 0,
+      "parent_witnesses": 2,
+      "precision_reached": true,
+      "model_rebuilt": true,
+      "original_input_unchanged": true,
+      "prior_certificate_rechecked": true,
+      "optimization_or_root_search_called": false,
+      "vertex_enumeration_called": false
+    }
+  },
+  "optimization_called": false,
+  "point_EM_refitted": false,
+  "sampler_called": false,
+  "scope": "Saved input and proof verification, not an independent proof of sampling coverage."
+}

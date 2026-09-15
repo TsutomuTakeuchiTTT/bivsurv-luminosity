@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "label_count": 30,
+  "references_defined_within_snippet": true,
+  "environments_balanced": true,
+  "braces_balanced": true,
+  "ASCII_Japanese_punctuation": true,
+  "compiled": false
+}

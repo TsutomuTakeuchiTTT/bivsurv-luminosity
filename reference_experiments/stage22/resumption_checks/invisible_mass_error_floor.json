@@ -1,0 +1,23 @@
+[
+  {
+    "lambda": "-3/4",
+    "true_invisible_mass": "13/64",
+    "fixed_EM_invisible_mass": "1/9",
+    "absolute_bias_at_2_2": "53/576",
+    "three_point_RMSE_lower_bound": 0.05312424351918432
+  },
+  {
+    "lambda": "0",
+    "true_invisible_mass": "1/4",
+    "fixed_EM_invisible_mass": "1/9",
+    "absolute_bias_at_2_2": "5/36",
+    "three_point_RMSE_lower_bound": 0.08018753738744804
+  },
+  {
+    "lambda": "3/4",
+    "true_invisible_mass": "19/64",
+    "fixed_EM_invisible_mass": "1/9",
+    "absolute_bias_at_2_2": "107/576",
+    "three_point_RMSE_lower_bound": 0.10725083125571173
+  }
+]

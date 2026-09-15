@@ -1,0 +1,18 @@
+{
+  "catalogues": 240,
+  "dense_step_comparisons": 240,
+  "fit_invariants": 240,
+  "fresh_rerun_comparison": {
+    "all_metric_rows_equal_except_seconds": true,
+    "array_exact_matches": 1808,
+    "public_JSON_byte_matches": 240
+  },
+  "global_certificate_for_new_fits": false,
+  "max_dense_indexed_update_difference": 8.673617379884035e-18,
+  "max_score": 9.989232008887057e-08,
+  "metric_comparisons": 1680,
+  "passed": true,
+  "public_tables": 720,
+  "quadrature_tightening_max_difference": 2.4483884387079577e-19,
+  "true_marginal_max_difference": 9.020562075079397e-17
+}

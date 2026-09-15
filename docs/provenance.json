@@ -1,0 +1,222 @@
+[
+  {
+    "stage": 22,
+    "original_archive": "bivariate_survival_reconstruction_stage22_resumed.zip",
+    "original_archive_sha256": "9a0c7e707ff59723d4fef97b45a9539b0004a7bdaba78142fe301b8854fc1c30",
+    "source_files": [
+      {
+        "path": "verify_stage22.py",
+        "sha256": "6421da1820a0ddf17fd542378e436a3a952c760d9c420d8c15a9d1a7e2b8188f"
+      },
+      {
+        "path": "refine_projections_stage22.py",
+        "sha256": "9f6d732514575faf490937f1c739b015a0aaed702aededf8242ce5a244adfc9a"
+      },
+      {
+        "path": "project_stage22.py",
+        "sha256": "38f516a0210143f1ac661740d5af0faa5e3d8f8c62a9aad5114981de8deee5d5"
+      },
+      {
+        "path": "audit_stage22.py",
+        "sha256": "e32cecd354ba1f3189870f8e831d23827e5c88f823304c5db8feea29c2820c5a"
+      },
+      {
+        "path": "vendor20/verify_stage20.py",
+        "sha256": "bd7103bfa5a34abaa322a38353e52634c77008fc38d6d79179f12f732dd38160"
+      },
+      {
+        "path": "vendor20/column_certificates.py",
+        "sha256": "3d11a871aec652abb359703d0ea1b3b307165cd619bf54bdf4077d1e476fd053"
+      },
+      {
+        "path": "vendor21/refine.py",
+        "sha256": "5861b2ffe65883d5392b17e2d5a88391278e7ab0386a60923c958adcdee13c61"
+      },
+      {
+        "path": "vendor21/verify_stage21.py",
+        "sha256": "8afae0983f3ca8db4bafb39978e64cf8c053e7834f230dbb6ca2296f1dcf263b"
+      },
+      {
+        "path": "resumption_checks/compare_runs.py",
+        "sha256": "7585a8ca3a0692f56dea9481b80ebbf8d8e55c203230dac90b65f682f1226290"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/verify_stage20.py",
+        "sha256": "bd7103bfa5a34abaa322a38353e52634c77008fc38d6d79179f12f732dd38160"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/column_certificates.py",
+        "sha256": "3d11a871aec652abb359703d0ea1b3b307165cd619bf54bdf4077d1e476fd053"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/exact.py",
+        "sha256": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/integrated.py",
+        "sha256": "8e54038f21588394ed1c44da3712cd04938c5fd9fb2b715566a7e8311a4f828e"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/multilimit.py",
+        "sha256": "efaeebb3a4458e2f099a40043df55eddc1e2cb3a3721749c5827f39510ad8fbc"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/vendor14/coarsened_model.py",
+        "sha256": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699"
+      },
+      {
+        "path": "vendor21/prior/bivariate_survival_reconstruction_stage20/vendor19/vendor14/prior/split_inference.py",
+        "sha256": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+      },
+      {
+        "path": "vendor20/vendor19/exact.py",
+        "sha256": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58"
+      },
+      {
+        "path": "vendor20/vendor19/integrated.py",
+        "sha256": "8e54038f21588394ed1c44da3712cd04938c5fd9fb2b715566a7e8311a4f828e"
+      },
+      {
+        "path": "vendor20/vendor19/multilimit.py",
+        "sha256": "efaeebb3a4458e2f099a40043df55eddc1e2cb3a3721749c5827f39510ad8fbc"
+      },
+      {
+        "path": "vendor20/vendor19/vendor14/coarsened_model.py",
+        "sha256": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699"
+      },
+      {
+        "path": "vendor20/vendor19/vendor14/prior/split_inference.py",
+        "sha256": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+      }
+    ],
+    "source_code_modified": false
+  },
+  {
+    "stage": 23,
+    "original_archive": "bivariate_survival_reconstruction_stage23.zip",
+    "original_archive_sha256": "0cc446fd73ceb17a3b57d66195a489cd66085f6b49d1938c4aae767579bc4e03",
+    "source_files": [
+      {
+        "path": "audit_controls.py",
+        "sha256": "9e557a4ee4945f9d148f69efd7924e86034ca98f497bcbf672e5b1b9ed75d6ce"
+      },
+      {
+        "path": "depth_study.py",
+        "sha256": "9422c9e799aa248568983d41d6735f25bd86d4d517b992830e9eeb5db8fc40e9"
+      },
+      {
+        "path": "verify_stage23.py",
+        "sha256": "81b144cc8c014e20699c311e83e4fbe7a6f720ccb3fb39c72a3823aea29cff0a"
+      },
+      {
+        "path": "population_fibers.py",
+        "sha256": "d4441c74d2aed2d2a3645a35b52ede22227248b04415c2410b34cff50814f6e4"
+      },
+      {
+        "path": "vendor20/verify_stage20.py",
+        "sha256": "bd7103bfa5a34abaa322a38353e52634c77008fc38d6d79179f12f732dd38160"
+      },
+      {
+        "path": "vendor20/column_certificates.py",
+        "sha256": "3d11a871aec652abb359703d0ea1b3b307165cd619bf54bdf4077d1e476fd053"
+      },
+      {
+        "path": "vendor20/vendor19/exact.py",
+        "sha256": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58"
+      },
+      {
+        "path": "vendor20/vendor19/integrated.py",
+        "sha256": "8e54038f21588394ed1c44da3712cd04938c5fd9fb2b715566a7e8311a4f828e"
+      },
+      {
+        "path": "vendor20/vendor19/multilimit.py",
+        "sha256": "efaeebb3a4458e2f099a40043df55eddc1e2cb3a3721749c5827f39510ad8fbc"
+      },
+      {
+        "path": "vendor20/vendor19/vendor14/coarsened_model.py",
+        "sha256": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699"
+      },
+      {
+        "path": "vendor20/vendor19/vendor14/prior/split_inference.py",
+        "sha256": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+      }
+    ],
+    "source_code_modified": false
+  },
+  {
+    "stage": 24,
+    "original_archive": "bivariate_survival_reconstruction_stage24.zip",
+    "original_archive_sha256": "121e6b7202dcb03097b52f91a83c972df78d2aa0e06f51e689cba92464f2d126",
+    "source_files": [
+      {
+        "path": "check_reproducibility.py",
+        "sha256": "6c23591177e7c54ffd2885a228d7f46ce059457716981d14d9cab8fd1c271ac1"
+      },
+      {
+        "path": "verify_stage24.py",
+        "sha256": "8a9235a8a516c2ccd13b1dd1a02b412cb20c3b9b82a3af554383027feef62993"
+      },
+      {
+        "path": "audit_stage24.py",
+        "sha256": "864415234251275156d69a7a962a9166cf05139edf59a08f58eed03050fa0ef9"
+      },
+      {
+        "path": "core.py",
+        "sha256": "8e562fc6313b3b7511223552ecd5331f5e2109f38049949c5ef5bc510764ac3b"
+      },
+      {
+        "path": "vendor/exact.py",
+        "sha256": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58"
+      },
+      {
+        "path": "vendor/coarsened_model.py",
+        "sha256": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699"
+      },
+      {
+        "path": "vendor/prior/split_inference.py",
+        "sha256": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+      }
+    ],
+    "source_code_modified": false
+  },
+  {
+    "stage": 25,
+    "original_archive": "bivariate_survival_reconstruction_stage25.zip",
+    "original_archive_sha256": "f27ebbff3114c6ef29167216a2b4ec42753021b953557ca817cfdc120b53de0e",
+    "source_files": [
+      {
+        "path": "global_bound.py",
+        "sha256": "5777bac2ce8e2a3e6ee7c96cdce13051d7996cf6d600f30ece50882aad6e7615"
+      },
+      {
+        "path": "audit_stage25.py",
+        "sha256": "e97f303b9a6d5c0a747cd79332e093ad64c28792b6af235a0fb19f508ff3d037"
+      },
+      {
+        "path": "verify_stage25.py",
+        "sha256": "9db3e7cfff42536a268b35236598ab70f38886ba40e7a73930a1488600e53aa4"
+      },
+      {
+        "path": "reference_stage24/verify_stage24.py",
+        "sha256": "8a9235a8a516c2ccd13b1dd1a02b412cb20c3b9b82a3af554383027feef62993"
+      },
+      {
+        "path": "reference_stage24/core.py",
+        "sha256": "8e562fc6313b3b7511223552ecd5331f5e2109f38049949c5ef5bc510764ac3b"
+      },
+      {
+        "path": "reference_stage24/vendor/exact.py",
+        "sha256": "4309a0986f917d2a8e423feb77d2afca87eb1d32a29d902b3e9f4d65b1be9d58"
+      },
+      {
+        "path": "reference_stage24/vendor/coarsened_model.py",
+        "sha256": "ac806846e4109b61e0a1a189dd28e227281896fca09d3d27327b57ed64efd699"
+      },
+      {
+        "path": "reference_stage24/vendor/prior/split_inference.py",
+        "sha256": "07b91f5dd1b70e20e1a5307890d3b7703e2adc66c6409d6a049419cd54865b20"
+      }
+    ],
+    "source_code_modified": false
+  }
+]

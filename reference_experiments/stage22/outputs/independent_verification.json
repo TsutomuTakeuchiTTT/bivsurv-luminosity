@@ -1,0 +1,92 @@
+{
+  "all_scoped_checks_passed": true,
+  "counts": {
+    "EM_last_state_checks": 120,
+    "parents": 120000,
+    "raw_count_reconstructions": 120,
+    "training_predictions": 120,
+    "trials": 120,
+    "true_membership_checks": 120
+  },
+  "covered_parent_sets": 120,
+  "inverse_conditional_cdf_max_abs_error": 3.3306690738754696e-16,
+  "invisible_initial_mass_max_abs_error": 6.245004513516506e-16,
+  "optimization_called": false,
+  "point_EM_refitted": false,
+  "projection_certificates": {
+    "lambda0_N400_r000": {
+      "certificates": 24,
+      "column_inequalities": 264,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 23,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 35,
+      "vertex_enumeration_called": false
+    },
+    "lambda1_N400_r000": {
+      "certificates": 14,
+      "column_inequalities": 154,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 13,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 25,
+      "vertex_enumeration_called": false
+    },
+    "lambda2_N400_r000": {
+      "certificates": 16,
+      "column_inequalities": 176,
+      "excluded_leaves": 0,
+      "model_rebuilt": true,
+      "nodes": 15,
+      "optimization_or_root_search_called": false,
+      "original_input_unchanged": true,
+      "parent_witnesses": 2,
+      "passed": true,
+      "precision_reached": true,
+      "prior_certificate_rechecked": true,
+      "supporting_planes": 22,
+      "vertex_enumeration_called": false
+    }
+  },
+  "raw_min_ell_increment": -4.547473508864641e-13,
+  "sampler_called": false,
+  "scope": "Saved input and proof verification, not an independent proof of sampling coverage.",
+  "truth_cell_integrals": {
+    "-3/4": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "169/256",
+        "169/256",
+        "51/64"
+      ]
+    },
+    "0": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "5/8",
+        "5/8",
+        "3/4"
+      ]
+    },
+    "3/4": {
+      "cell_integral_sum": "1",
+      "selection": [
+        "151/256",
+        "151/256",
+        "45/64"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "all_13_searches_reexecuted": true,
+  "compared_fields": "all certificate fields except seconds",
+  "case_count": 13,
+  "independent_verification_on_both_outputs": true,
+  "new_random_samples_generated": false,
+  "GEM_refitted": false
+}

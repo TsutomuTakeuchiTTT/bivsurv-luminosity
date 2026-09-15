@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "public_reobservations_verified": 720,
+  "training_predictions_verified": 720,
+  "true_membership_checks": 720,
+  "accepted_memberships": 719,
+  "unconstrained_fits_outside_tail": 13,
+  "maximum_invisible_mass_drift": 6.245004513516506e-16,
+  "population_certificates": 54,
+  "rational_dual_columns": 2268,
+  "rational_extremal_parents": 108,
+  "analytic_witnesses": 54,
+  "tamper_cases_rejected": 4,
+  "sampler_called": false,
+  "numeric_EM_refitted": false,
+  "LP_called": false,
+  "nonlinear_optimization_called": false
+}

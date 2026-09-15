@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "all_13_cases_rerun": true,
+  "GEM_updates_per_run": 1040,
+  "independent_boundary_searches_per_run": 39,
+  "certificate_json_byte_identical_count": 13,
+  "comparison_csv_byte_identical": true,
+  "results_identical_except_seconds": true,
+  "sampling_not_performed": true
+}

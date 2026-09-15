@@ -1,0 +1,8 @@
+{
+  "case": "rho0.55_N16000_r000",
+  "design": "deep",
+  "same_mass_as_saved_fit": true,
+  "max_abs_difference": 0.0,
+  "uses_latent_arrays": false,
+  "global_certificate": false
+}

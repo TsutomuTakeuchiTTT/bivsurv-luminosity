@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "all_six_sampling_designs_reexecuted": true,
+  "all_54_population_projections_reexecuted": true,
+  "independent_validation_executed_on_primary_output": true,
+  "comparison": {
+    "observed_inputs_byte_identical_count": 720,
+    "fits_byte_identical_count": 720,
+    "designs_byte_identical_count": 6,
+    "population_certificates_byte_identical_count": 54,
+    "trials.csv_byte_identical": true,
+    "summary.csv_byte_identical": true,
+    "population_ranges.csv_byte_identical": true,
+    "population_checks.json_byte_identical": true,
+    "sampling_summary_identical_except_seconds": true
+  }
+}
