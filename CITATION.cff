@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "Bivariate survival estimation for two-band luminosity catalogues"
 message: "Please cite this software and the exact version used."
 type: software
-version: 0.1.0rc1
+version: 0.1.0
 license: BSD-3-Clause
 repository-code: "https://github.com/TsutomuTakeuchiTTT/bivsurv-luminosity"
 authors:
